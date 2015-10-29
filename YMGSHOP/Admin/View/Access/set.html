@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>权限设置</title>
+<hdjs/>
+<style type="text/css">
+	ul{
+		margin-left: 50px;
+	}
+	li{
+		list-style: none;
+		float: left;
+		margin-right: 10px;
+	}
+</style>
+</head>
+<body>
+	<div class="warp">
+		<div class="hd-title"></div>
+		<form method="post" >
+		<input type="hidden" name="rid" value="{$hd.get.rid}" />
+		<table class="table2">
+			<tbody>
+				<list from="$node" name="$d">	
+				<list from="$d._data" name="$c">
+				<tr>
+					<td>
+						<label >
+						<input type="checkbox" class="w30" <if value="in_array($c['name'],$controller)"> checked=""</if>  />{$c.title}</label>
+						<ul>
+							<list from="$c._data" name="$m">
+								<li>
+								<label >
+								<input type="checkbox" class="w40" name="access[{$c.name}][]" value="{$m.name}" <if value="in_array($m['name'],$action[{$c.name}])"> checked="" </if>  />{$m.title}</label>
+								</li>
+							</list>
+						</ul>
+					</td>
+				</tr>
+				</list>
+				</list>
+			</tbody>
+		</table>
+		<input type="submit" class="hd-success" value="确定" />
+		</form>
+	</div>
+</body>
+</html>

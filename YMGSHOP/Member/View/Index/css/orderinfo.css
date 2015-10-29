@@ -1,0 +1,74 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 宋体;
+}
+.h_section_R {
+    width: 792px;
+    /*float: right;*/
+    margin: 0 auto;
+}
+.txt {
+    padding: 3px 0px 20px;
+    float: left;
+    width: 792px;
+}
+.txt h3 {
+    border-bottom: 1px dashed #CCC;
+    float: left;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    width: 790px;
+    font-size: 14px;
+    position: relative;
+}
+.txt h4 {
+    overflow: hidden;
+    color: #343434;
+    width: 790px;
+    height: 35px;
+    padding-top: 5px;
+    font-weight: normal;
+    position: relative;
+	float: left;
+}
+.table {
+    clear: both;
+    border-collapse: collapse;
+}
+.table tr td {
+    border: 1px solid #CCC;
+    padding: 5px;
+    background: none repeat scroll 0% 0% #FFF;
+    text-align: center;
+
+}
+.table td.h {
+    border: 1px solid #CCC;
+    background: none repeat scroll 0% 0% #F3F3F3;
+    color: #666;
+}
+.table td.t {
+    padding-left: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

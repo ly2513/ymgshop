@@ -1,0 +1,10 @@
+[ 2014-11-22T12:30:34+08:00 ]NOTICE:  : [8] Undefined index: username D:\wamp\www\www\11\ymgshop\YMGSHOP\Temp\Compile\Admin\Index\index_3578992c.php 第 63 行.
+[ 2014-11-22T12:30:34+08:00 ]NOTICE:  : [8] Use of undefined constant METHOD - assumed 'METHOD' D:\wamp\www\www\11\ymgshop\YMGSHOP\Temp\Compile\Admin\Index\index_3578992c.php 第 81 行.
+
+[ 2014-11-22T12:30:34+08:00 ]ERROR: 控制器中不存在动作Css
+[ 2014-11-22T12:30:34+08:00 ]ERROR: 控制器中不存在动作Css
+[ 2014-11-22T20:23:41+08:00 ]NOTICE:  : [8] Undefined index: username D:\wamp\www\www\11\ymgshop\YMGSHOP\Temp\Compile\Admin\Index\index_3578992c.php 第 63 行.
+[ 2014-11-22T20:23:41+08:00 ]NOTICE:  : [8] Use of undefined constant METHOD - assumed 'METHOD' D:\wamp\www\www\11\ymgshop\YMGSHOP\Temp\Compile\Admin\Index\index_3578992c.php 第 81 行.
+
+[ 2014-11-22T20:23:42+08:00 ]ERROR: 控制器中不存在动作Css
+[ 2014-11-22T20:23:42+08:00 ]ERROR: 控制器中不存在动作Css

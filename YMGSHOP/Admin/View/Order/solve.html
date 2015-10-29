@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>已处理订单</title>
+<hdjs/>
+</head>
+<body>
+	<div class="warp">
+		<div class="menu_list hd-form">
+			<ul>
+				<li>
+					<a href="{|U:'index'}">订单列表</a>
+				</li>
+				
+			</ul>
+		</div>
+		<table class="table2">
+			<thead>
+				<tr>
+					<td>id</td>
+					<td>订单号</td>
+					<td>收货人</td>
+					<td>收货地址</td>
+					<td>交易金额(元)</td>
+					<td>订单状态</td>
+					<td>下单时间</td>
+					<td>手机联系方式</td>
+					<td>座机联系方式</td>
+					<td>邮政编码</td>
+					<!-- <td>操作</td> -->
+				</tr>
+			</thead>
+			<tbody>
+				<list from="$data" name="$d">	
+				<tr>
+					<td>{$d.order_id}</td>
+					<td>{$d.order_sn}</td>
+					<td>{$d.consignee}</td>
+					<td>{$d.address}</td>
+					<td>{$d.amount}</td>
+					<td>{$d.order_status_text}</td>
+					<td>{$d.add_time|date:'Y-m-d H:i:s',@@}</td>
+					<td>{$d.mobile}</td>
+					<td>{$d.tel}</td>
+					<td>{$d.zipcode}</td>
+					<!-- <td> 
+						<a href="{|U:'del',array('order_id'=>$d['order_id'])}">删除</a>
+					</td> -->
+				</tr>
+				</list>
+			</tbody>
+		</table>
+		<!-- 分页 -->
+		<div class="page1">
+			{$page}
+		</div>
+	</div>
+</body>
+</html>

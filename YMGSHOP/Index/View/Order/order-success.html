@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>提交订单</title>
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/css/order-success.css" />
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/css/public.css" />
+</head>
+<body>
+	<!-- top start-->
+	<div id="top">
+		<div class="top">
+			<div class="left">
+				<if value="{$hd.session.username}==''">
+				<span>欢迎光临优美购！</span>
+				<a href="{|U:'User/login'}">登录</a>  |  <a href="{|U:'User/register'}">注册</a>
+				<else/>
+				<!-- 管理员登录后 -->
+				<span>欢迎{$hd.session.username}光临优美购！</span>
+				<a href="{|U:'User/out'}">退出</a>
+			</if>
+			</div>
+		</div>
+	</div>
+	<!-- top end -->
+	<div id="big">
+		<div class="logo">
+			<img src="__CONTROLLER_VIEW__/image/logo.png" alt=""  />
+		</div>
+		<div class="order_right"></div>
+	</div>
+	<!-- order start -->
+	<div id="order">
+		<div class="order_main">
+			<div class="paytitle">
+				<p>
+					<span style="font-weight:700;font-size: 26px;color: #D60076;">
+						<img src="__CONTROLLER_VIEW__/image/tj1.jpg" alt="" style="vertical-align:middle" />
+					</span>
+					<span>为保证及时处理您的订单，请于24小时内支付，否则订单将被自动取消。</span>
+				</p>
+			</div>
+			<div class="payxx">
+				<div class="pay-info-line">
+					应付金额:
+					<span class="price-icon">￥</span>{$totalprice}
+					<span class="pay-line">|</span>
+					<!-- 支付方式和总价 -->
+					<font class="red">
+					<if value="$payway eq 2">
+						货到付款
+					<else/>
+						在线支付
+					</if>：<span class="price-icon">￥</span>{$totalprice}</font>
+				</div>
+				<div style="text-align:center">
+					<table class="pay_table">
+						<tbody>
+							<tr>
+								<td>订单号：{$order_sn} </td>
+								<td>网上在线支付:
+									<span class="price-icon">￥</span>{$totalprice}
+                                </td>
+								<td>由优美购发货</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 订单信息 -->
+				<div class="order_info">
+					<a href="{|U:'Member/Index/index'}" class="red"> 查看订单 </a>
+					<span class="red_line">|</span>
+					<a href="{|U:'Member/Index/index'}" class="red">修改订单</a>
+				</div>
+			</div>
+			<!-- 支付银行 -->
+			<if value="$payway eq 1">
+			<div class="banks">
+				<div class="bstitle">
+					<ul>
+						<li class="bb1"></li>
+						<li class="bb3 on">全部支付方式</li>
+						<li class="bb4"></li>
+					</ul>
+				</div>
+				<div class="bks1">
+					<!-- <div style="width: 960px;float: left;">
+						<div class="t1">网上银行：</div>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/gsbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/jhbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/nybank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/jtbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/zgbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/yzbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/xybank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/msbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/nbbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/zxbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/pfbank.gif" alt="" />
+								</dd>
+							</dl>
+						</label>
+					</div> -->
+					<!-- 支付宝支付 -->
+					<div style="width: 960px;float:left; _padding-bottom: 30px;">
+						<div class="t2">支付平台：</div>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" value="alipay" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/zfb.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<!-- <label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/zfbsm.gif" alt="" />
+								</dd>
+							</dl>
+						</label> -->
+					</div>
+					<!-- 信用卡支付 -->
+					<!-- <div style="width: 960px;float:left; _padding-bottom: 30px;">
+						<div class="t2">信用卡快捷支付（无需开通网银）:</div>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/gsbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+						<label >
+							<dl>
+								<dt>
+									<input type="radio" name="bank" id="" />
+								</dt>
+								<dd>
+									<img src="__CONTROLLER_VIEW__/image/jhbank.jpg" alt="" />
+								</dd>
+							</dl>
+						</label>
+					</div> -->
+				</div>
+				<div class="paynow">
+					<form action="{|U('Alipay/index')}" method="post" name="alipay" onclick="submit(this)" >
+						<input type="hidden" name="ordername" value="{$order_sn}" />
+						<input type="hidden" name="total" value="{$totalprice}" />
+						<input type="image" src="__CONTROLLER_VIEW__/image/paynow.jpg" />	
+					</form>
+				</div>
+			</div>
+			</if>
+		</div>
+	</div>
+
+	<!-- order end -->
+	<!-- foot start -->
+	<include file="__CONTROLLER_VIEW__/bottom.html"/>
+	<!-- foot end -->
+</body>
+</html>

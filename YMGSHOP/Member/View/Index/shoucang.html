@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="__CONTROLLER_VIEW__/css/orderList.css">
+</head>
+<body>
+	<div class="h_section_R">
+		<div style="padding-bottom: 13px;float: left;">
+			<div class="R_formbox">
+				<h3>收藏夹</h3>
+			</div>
+		</div>
+		<div class="section_R_2">
+			<div class="R_2_order">
+				<table class="table3"  width="790" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<td class="td6" height="33" >商品</td>
+							<td class="td7">商品名称</td>
+							<td class="td7">商品价格</td>
+							<td class="td9">操作</td>
+						</tr>
+					</thead>
+					<tbody>
+						<list from="$data" name="$d">
+							<list from="$d" name="$c">
+						<tr>
+							<td class="td7" height="33">
+								<img src="__ROOT__/{$c.goods_thumb}" alt="">
+							</td>
+							<td class="td6">
+									<a href="{|U:'Index/Index/detail',array('gid'=>$c['gid'])}">{$c.goods_name}</a>
+							</td>
+							<td class="td8">￥{$c.goods_price}</td>
+							<td>
+								<a href="{|U:'Index/Index/detail',array('gid'=>$c['gid'])}" target="_blank" >购买</a>   |   
+								<a href="javascript:;" onclick="del()">删除</a>
+							</td>
+						</tr>
+						</list>
+						</list>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="page1">
+			{$page}
+		</div>
+	</div>
+	<js file="__CONTROLLER_VIEW__/js/jquery.js"/>
+	<js file="__CONTROLLER_VIEW__/js/orderList.js"/>
+</body>
+</html>

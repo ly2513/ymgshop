@@ -1,0 +1,440 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+}
+/*网络字体声明*/
+@font-face {font-family: 'iconfont';
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    caption-side: 
+    }
+
+/*大区域*/
+#big{
+	width: 100%;
+	background: url(../image/big_bg.jpg);
+	float: left;
+
+}
+/*轮播图区域*/
+#big #bigimg{
+	width: 100%;
+	height: 525px;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+}
+/*轮播图效果布局*/
+.lunul{
+	width: 1920px;
+	height: 525px;
+	position: absolute;
+	/*overflow: hidden;*/
+	left:50%;
+	margin-left: -960px;
+}
+#big #bigimg ul#lunimg{
+	list-style: none;
+	height: 525px;
+	position: absolute;
+	
+}
+#big #bigimg ul#lunimg li{
+	width: 1920px;
+	height: 525px;
+	float: left;
+}
+#big #bigimg ul.round{
+	list-style: none;
+	position: absolute;
+	/*width: */
+	height: 25px;
+	bottom:10px;
+	right: 100px;
+}
+#big #bigimg ul.round li{
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+	background: #333;
+	float: left;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 25px;
+	color: #fff;
+	cursor: pointer;
+}
+#big #bigimg ul.round li.cur{
+	background: #D40174;
+}
+/*箭头*/
+.jiantou{
+    font-family:"iconfont" !important;
+    font-size:80px;
+    font-style:normal;
+    font-weight: 700;
+    opacity: 0.5;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+	display: none;
+}
+#big #bigimg i.left{
+	top:220px;
+	left: 50px;
+	cursor: pointer;
+}
+#big #bigimg i.right{
+	top:220px;
+	right: 50px;
+	cursor: pointer;
+}
+#big #bigimg i.cur{
+	color: #E10162;
+}
+
+/*产品区域*/
+#big #main{
+	width: 1200px;
+	padding: 0 22px;
+	/*height: 400px;*/
+	margin: 0 auto 100px;
+	background: #fff;
+	overflow: hidden;
+}
+#big #main .shopaction{
+	width: 1200px;
+	height: 388px;
+	margin: 30px auto 0;
+	overflow: hidden;
+}
+#big #main .shopaction img{
+	float: left;
+}
+/*原创热销区域*/
+#big #main .yc{
+	width: 1200px;
+	margin: 24px auto 0px;
+	overflow: hidden;
+}
+#big #main .yc img{
+	display: inline-block;
+}
+#big #main .yc .more{
+	width: 1200px;
+	height: 13px;
+	overflow: hidden;
+	float: left;
+	background: url(../image/more.jpg) no-repeat;
+}
+#big #main .yc .more span{
+	width: 136px;
+	float: right;
+	margin-right: 26px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 14px;
+}
+#big #main .yc .more span a{
+	text-decoration: none;
+	color:#464936;
+}
+#big #main .yc .hotgoogstop{
+	width: 1206px;
+}
+#big #main .yc .hotgoogstop .line{
+	width: 1198px;
+	height: 35px;
+	border-left: 1px solid #C2C2C2;
+	border-right: 1px solid #C2C2C2;
+	line-height: 22px;
+}
+#big #main .yc .hotgoogstop span{
+	float: left;
+	width: 597px;
+	padding-right: 6px;
+}
+#big #main .yc .hotgoods{
+	width: 1198px;
+	background: #fff;
+	overflow: hidden;
+	border: 1px solid #C2C2C2;
+	border-left: none;
+}
+#big #main .yc .hotgoods dl{
+	width: 193px;
+	height: 338px;
+	display: inline;
+	float: left;
+	padding-bottom: 19px;
+	margin: 7px 1px 0px 5px;
+	overflow: hidden;
+	position: relative;
+}
+#big #main .yc .hotgoods dl dt{
+	width: 193px;
+	overflow: hidden;
+}
+#big #main .yc .hotgoods dl dd.dd{
+	height: 76px;
+	left: 0px;
+	top: 262px;
+	position: absolute;
+	width: 193px;
+	z-index: 89;
+	overflow: hidden;
+	background: url(../image/description.png) no-repeat;
+}
+#big #main .yc .hotgoods dl dd.dd p{
+	width: 187px;
+	height: 33px;
+	clear: both;
+	display: block;
+	line-height: 15px;
+	overflow: hidden;
+	text-align: left;
+	padding-left: 5px;
+}
+#big #main .yc .hotgoods dl dd.dd p span.goods_num{
+	width: 80px;
+	height: 17px;
+	color: #000;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 19px;
+	padding: 10px 0px 0px 5px;
+}
+#big #main .yc .hotgoods dl dd.dd p span.goods_num span{
+	color: #fff;
+	font-weight: 400;
+	font-size:12px;
+	font-family: 宋体; 
+}
+#big #main .yc .hotgoods dl dd.dd p span.goods_list{
+	width: 20px;
+	height: 20px;
+	color: #F03A5D;
+	display: block;
+	float: left;
+	font: bold 24px/20px "verdana";
+	padding: 9px 0px 0px 35px;
+}
+#big #main .yc .hotgoods dl dd.dd p a{
+	clear: both;
+	width: 187px;
+	height: 17px;
+	line-height: 17px;
+	padding-top: 3px;
+	color: #333;
+	display: inline-block;
+	text-decoration: none;
+}
+#big #main .yc .hotgoods dl dd.dd p span.price{
+	clear: both;
+	display: block;
+	height: 15px;
+	width: 187px;
+	color: #000;
+	font-weight: 700;
+}
+#big #main .yc .hotgoods dl dd.dd p span.price span{
+	color: #DD7677;
+}
+/*原创折扣*/
+#big #main .yc .zkgoods{
+	background: #fff;
+	overflow: hidden;
+	width: 1198px;
+	border: 1px solid #c2c2c2;
+	border-left: none;
+}
+#big #main .yc .zkgoods dl{
+	width: 292px;
+	overflow: hidden;
+	float: left;
+	padding: 6px 0px 0px 6px;
+}
+#big #main .yc .zkgoods dl dt{
+	width: 292px;
+	height: 395px;
+	overflow: hidden;
+	position: relative;
+}
+#big #main .yc .zkgoods dl dt .title{
+	width: 265px;
+	height: 89px;
+	position: absolute;
+	left: 13px;
+	top: 146px;
+	z-index: 1;
+}
+/*这盖效果*/
+#big #main .yc .zkgoods dl dt .titlebg{
+	width: 265px;
+	height: 89px;
+	position: absolute;
+	left: 13px;
+	top: 146px;
+	background: #FFF;
+	opacity: 0.5;
+}
+#big #main .yc .zkgoods dl dt img{
+	width: 292px;
+	height: 395px;
+	float: left;
+}
+#big #main .yc .zkgoods dl dt .title p.t{
+	width: 245px;
+	height: 40px;
+	padding: 0px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #4B4A48;
+	line-height: 20px;
+	overflow: hidden;
+	margin-top: 12px;
+	text-align: center;
+}
+#big #main .yc .zkgoods dl dt span.title p.t a{
+	color: #8f8f8f;
+	text-decoration: none;
+}
+#big #main .yc .zkgoods dl dt .title p.s{
+	width: 245px;
+	padding: 0px 10px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #4B4A48;
+	line-height: 20px;
+	overflow: hidden;
+	margin-top: 5px;
+	text-align: center;
+}
+#big #main .yc .zkgoods dl dd{
+	height: 40px;
+}
+#big #main .yc .zkgoods dl dd .sales{
+	width: 292px;
+	float: left;
+	height: 39px;
+	line-height: 39px;
+}
+#big #main .yc .zkgoods dl dd .sales p.rmb{
+	float: left;
+	font-weight: 700;
+	color: #dd1414;
+	font-size: 20px;
+}
+#big #main .yc .zkgoods dl dd .sales p.rmb del{
+	color: #474A37;
+	padding-left: 10px;
+
+}
+#big #main .yc .zkgoods dl dd .sales p.getto{
+	float: right;
+	width: 83px;
+	height: 27px;
+	padding-top: 6px;
+}
+/*商品类型导航图片*/
+#big #main .imgnav{
+	width: 1200px;
+	overflow: hidden;
+}
+#big #main .imgnav img{
+	float: left;
+	display: inline-block;
+}
+/*针织衫区域*/
+#big #main .zzs{
+	width: 1198px;
+	margin: 0px auto 50px;
+	overflow: hidden;
+	border: 1px solid #C2C2C2;
+	padding-bottom: 18px;
+
+}
+#big #main .zzs .proimg{
+	padding-left: 10px;
+	width: 1188px;
+	overflow: hidden;
+	float: left;
+}
+#big #main .zzs .proimg dl{
+	width: 230px;
+	float: left;
+	overflow: hidden;
+	margin-top: 12px;
+	margin-right: 7px;
+}
+#big #main .zzs .proimg dl dt{
+	width: 230px;
+	height: 311px;
+	float: left;
+}
+#big #main .zzs .proimg dl dt img{
+	width: 230px;
+	height: 311px;
+	float: left;
+}
+#big #main .zzs .proimg dl dd{
+	width: 230px;
+	height: 54px;
+	float: left;
+	background:#EEEDE9;
+}
+#big #main .zzs .proimg dl dd p.title{
+	width: 220px;
+	height: 27px;
+	float: left;
+	color: #474A37;
+	font-size: 12px;
+	white-space: nowrap;
+	padding-left: 10px;
+	line-height: 35px;
+	overflow: hidden;
+}
+#big #main .zzs .proimg dl dd p.title a{
+	text-decoration: none;
+	color: #474A37;
+}
+#big #main .zzs .proimg dl dd p.sales{
+	width: 220px;
+	height: 27px;
+	float: left;
+	color: #474A37;
+	font-size: 12px;
+	padding-left: 10px;
+	line-height: 27px;
+}
+#big #main .zzs .proimg dl dd p.sales a{
+	text-decoration: none;
+	color: #474A37;
+	line-height: 27px;
+}
+#big #main .zzs .proimg dl dd p.sales span.rmb{
+	float: left;
+	color: #7E1C0F;
+	font-weight: 700;
+}
+#big #main .zzs .proimg dl dd p.sales del{
+	font-family: 宋体;
+	margin-left: 10px;
+}
+

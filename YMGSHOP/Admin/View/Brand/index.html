@@ -1,0 +1,49 @@
+<!-- @author 李勇 626375290@qq.com -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>商品品牌列表</title>
+<hdjs/>
+</head>
+<body>
+	<div class="warp">
+		<div class="menu_list">
+			<ul>
+				<li>
+					<a href="{|U:'add'}">添加商品品牌</a>
+				</li>
+				<li>
+					<a href="{|U:'updateCache'}">更新缓存</a>
+				</li>
+			</ul>
+		</div>
+		<table class="table2">
+			<thead>
+				<tr>
+					<td class="w100">BID</td>
+					<td class="w350">商品品牌名</td>
+					<td class="w350">品牌LOGO</td>
+					<td class="w350">品牌排序</td>
+					<td class="w350">操作<td>
+				</tr>
+			</thead>
+			<tbody>
+				<list from="$data" name="$d">	
+				<tr id="tr">
+					<td id="bid">{$d.bid}</td>
+					<td>{$d.brand_name}</td>
+					<td><img src="__ROOT__/{$d.brand_logo}" alt="" style="height:40px" /></td>
+					<td><input type="text" value="{$d.brand_order}" class="w50 h30"style="text-align:center" name="brand_order"  /></td>
+					<td>
+						<a href="{|U:'edit',array('bid'=>$d['bid'],'bid'=>$d['bid'])}">编辑</a> | 
+						<a href="{|U:'delete',array('bid'=>$d['bid'])}">删除</a>
+					</td>
+				</tr>
+				</list>
+			</tbody>
+		</table>
+	</div>
+	<js file="__CONTROLLER_VIEW__/Js/js.js"/>
+</body>
+</html>

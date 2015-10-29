@@ -1,0 +1,87 @@
+<!-- @author 李勇 626375290@qq.com -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<hdjs/>
+<title>添加商品属性</title>
+<style type="text/css">
+	span{
+		font-size: 12px;
+		color: #c40000;
+	}
+</style>
+</head>
+<body>
+	<div class="warp">
+	<div class="menu_list ">
+		<ul>
+			<li ><a href="{|U:'index'}" class="action">商品属性列表</a></li>
+			<li><a href="{|U:'add'}">添加商品属性</a></li>
+		</ul>
+	</div>
+		<div class="title-header">添加商品属性</div>
+		<form  method="post">
+			<table class="table2 hd-form">	
+			<input type="hidden" name="attr_id"  value="{$attrdata.attr_id}" />
+				<tr>
+					<th>商品类型</th>
+					<td>
+						<select name="cat_id" id="" class="w200">
+							<list from="$field" name="$d">
+							<option value="{$d.cat_id}"<if value="{$d.cat_id eq Q('cat_id')}">selected=""</if>>{$d.cat_name}</option>
+							</list>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th class="w100">属性名称</th>
+					<td>
+						<input type="text" class="w200"  name="attr_name" value="{$attrdata.attr_name}" />
+					</td>
+				</tr>
+				<tr>
+					<th class="w100">属性类型</th>
+					<td>
+					<lable>
+						<input type="radio"   name="attr_type" value="0"<if value="{$attrdata.attr_type}==0"> checked=""</if> />普通属性
+					</lable>
+					<lable>	
+						<input type="radio" name="attr_type" value="1"<if value="{$attrdata.attr_type}==1"> checked=""</if>  />规格属性
+					</lable>
+						<span>普通属性只能录入值，规格属性可以设置价格比如颜色、尺码</span>
+					</td>
+				</tr>
+				<tr>
+					<th class="w100">属性录入类型</th>
+					<td>
+					<labal>
+						<input type="radio"   name="attr_input_type" value="1" <if value="{$attrdata.attr_input_type}==1"> checked=""</if> />文本框
+					</labal>
+					<labal>
+						<input type="radio" name="attr_input_type" value="2" <if value="{$attrdata.attr_input_type}==2"> checked=""</if>/>下拉列表
+					</labal>
+					<labal>
+						<input type="radio" name="attr_input_type" value="3" <if value="{$attrdata.attr_input_type}==3"> checked=""</if>/>文本域
+					</labal>
+					<span>选择下拉列表框时必须输入默认值</span>
+					</td>
+					
+				</tr>
+				<tr>
+					<th class="w100">商品属性值</th>
+					<td>
+						<textarea name="attr_value" class="w200 h100" <if value="{$attrdata.attr_input_type}!=2">disabled=''</if>>{$attrdata.attr_value}</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td><input type="submit" value="添加" class="hd-success" /></td>
+				</tr>
+			</table>
+			
+		</form>
+	</div>
+	<js file="__CONTROLLER_VIEW__/Js/add.js"/>
+</body>
+</html>

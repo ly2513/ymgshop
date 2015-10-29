@@ -1,0 +1,166 @@
+/* 
+* @Author: 李勇
+* @Date:   2014-12-07 10:59:39
+* @Last Modified by:   Administrator
+* @Last Modified time: 2014-12-10 00:09:15
+*/
+*{
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 宋体;
+}
+img{
+	border: none;
+}
+.h_section_R {
+    width: 792px;
+    margin: 0 auto;
+}
+.R_formbox {
+    padding: 20px 0px 10px;
+    float: left;
+    border-bottom: 1px dashed #CDCDCD;
+    width: 792px;
+}
+.R_formbox span {
+    color: #545454;
+}
+.w80 {
+    width: 80px;
+}
+.btn{
+	height: 25px;
+    background: url('../image/1.jpg') no-repeat right 0px ;
+    overflow: visible;
+	width: 50px;
+	cursor: pointer;
+	border: none;
+}
+.section_R_2, .R_2_menu {
+    width: 792px;
+    float: left;
+    overflow: hidden;
+    clear: both;
+}
+.R_2_order {
+    width: 792px;
+    float: left;
+    overflow: hidden;
+    clear: both;
+}
+.R_2_order table.table3 {
+    border: 1px solid #CCC;
+    display: block;
+    float: left;
+    width: 790px;
+    overflow: hidden;
+    color: #333;
+}
+.R_2_order table.table3 thead td {
+    background: url('../image/l_08.jpg') repeat-x 0% 0%;
+    height: 33px;
+}
+.R_2_order table.table3 td {
+    border-right: 1px dotted #CCC;
+    border-bottom: 1px dotted #CCC;
+    vertical-align: middle;
+    text-align: center;
+}
+.R_2_order table.table3 td.td6 {
+    width: 87px;
+    text-align: center;
+    border-bottom-width: none;
+}
+.R_2_order table.table3 td.td7 {
+    width: 175px;
+    text-align: center;
+    overflow: hidden;
+  border-bottom-width: none;
+}
+.R_2_order table.table3 td.td8 {
+    width: 68px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom-width: none;
+}
+.R_2_order table.table3 td.td9 {
+    width: 126px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom-width: none;
+}
+.R_2_order table.table3 td.td7 img {
+    width: 50px;
+    height: 68px;
+    padding: 6px 3px 6px 5px;
+    float: left;
+}
+.R_2_order table.table3 td a{
+    text-decoration: none;
+    color: #555;
+   /* display: block;
+    width: 30px;
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    /*float: left;*/
+    /*text-align: center;
+    margin:0px  5px;*/*/
+}
+.R_2_order table.table3 td a:hover{
+    color: #E00C58;
+}
+div.page1 {
+    margin-top: 20px;
+    margin-left: 10px;
+    float: right;
+    color: #666;
+}
+div.page1 span.close {
+    padding: 3px 10px;
+    display: block;
+    float: left;
+    font-size: 12px;
+    border: 1px solid #DCDCDC;
+    margin-right: 5px;
+    color: #CCC;
+    cursor: no-drop;
+}
+div.page1 strong {
+    display: block;
+    font-size: 12px;
+    float: left;
+    background:#488FCF ;
+    border-color: #2470B5 #488FCF #488FCF;
+    color: #FFF ;
+    border: 1px solid #DCDCDC;
+    margin-right: 5px;
+    padding: 3px 10px;
+}
+div.page1 span.count {
+    font-size: 12px;
+    float: left;
+    display: block;
+    margin-right: 5px;
+    padding: 3px 10px;
+}
+div.page1 strong, div.page1 a {
+    padding: 3px 10px;
+    display: block;
+    float: left;
+    border: 1px solid #DCDCDC;
+    margin-right: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+

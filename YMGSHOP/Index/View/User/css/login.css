@@ -1,0 +1,190 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 宋体;
+	font-size: 12px;
+}
+.head{
+	width: 980px;
+	margin: 0px auto;
+}
+.head img{
+	height: 117px;
+}
+/*登录信息区域*/
+.main{
+	width: 980px;
+	margin: 0 auto;
+}
+.user_frame{
+	width: 978px;
+	/*border: 1px solid #CCC;*/
+	float: left;
+	margin-top: 11px;
+	position: relative;
+	padding-bottom: 47px;
+	-webkit-box-shadow: inset hoff voff blur color;
+	box-shadow: 2px 2px 10px 2px #ccc;
+}
+.title{
+	width: 976px;
+	background: #F4F4F4;
+	margin: 1px;
+	display: inline-block;
+	height: 35px;
+	clear: both;
+}
+.logon_info{
+	width: 978px;
+	overflow: hidden;
+	clear: both;
+}
+.user_info{
+	width: 594px;
+	height: auto;
+	float: left;
+	border-right: 1px dashed #CCC;
+	overflow: hidden;
+	margin-top: 41px;
+}
+.userinfo_input{
+	width: 390px;
+	float: left;
+	overflow: hidden;
+	height: 51px;
+	padding-left: 201px;
+	position: relative;
+}
+.i_label{
+	width: 112px;
+	height: 25px;
+	line-height: 25px;
+	display: inline-block;
+	float: left;
+	text-align: right;
+	margin-left: -115px;
+}
+.i_text{
+	width: 199px;
+	height: 22px;
+	border: 1px solid #A7A6AB;
+	padding-left: 5px;
+	line-height: 22px;
+}
+.i_text_code{
+	width: 88px;
+	height: 22px;
+	border: 1px solid #A7A6AB;
+	padding-left: 5px;
+	line-height: 22px;
+}
+.code_img img{
+	padding-left: 5px;
+	width: 68px;
+	height: 24px;
+	vertical-align: middle;
+	display: inline-block;
+}
+#click_code{
+	cursor: pointer;
+}
+.i_btn_ok,.i_btn_ok1{
+	height: 30px;
+	background: url('../image/submit.jpg') no-repeat ;
+	overflow: hidden;
+	color: #FFF;
+	border: 0px none;
+	font: 15px/30px "微软雅黑";
+	text-align: center;
+	cursor: pointer;
+}
+.i_btn_ok{
+	width: 87px;
+
+}
+.i_btn_ok1{
+	width: 150px;
+}
+.l_forget_psw{
+	width: 80px;
+	padding-left: 10px;
+}
+.user_info_right{
+	width: 320px;
+	height: auto;
+	float: left;
+	overflow: hidden;
+	text-align: left;
+	padding: 137px 0px 0px 34px;
+}
+.user_info_right b{
+	height: 45px;
+	line-height: 45px;
+}
+.user_info_right a{
+	background: url('../image/l_07.jpg') no-repeat;
+	color: #FFF;
+	border: 0px none;
+	font: 14px/30px "微软雅黑";
+	text-align: center;
+	display: inline-block;
+	width: 87px;
+	height: 30px;
+	text-decoration: none;
+}
+/*foot*/
+.foot{
+	width: 980px;
+	margin: 0 auto;
+}
+.footer{
+	width: 980px;
+	float: left;
+	text-align: center;
+	color: #989898;
+	padding-top: 78px;
+}
+.deal{
+	width: 540px;
+	height: 106px;
+	padding: 5px;
+	overflow-y: scroll;
+	border: 1px solid #C9C9C9;
+	color: #666;
+	line-height: 20px;
+	float: left;
+	margin-left: 15px;
+}
+.deal b{
+	display: block;
+	width: 510px;
+	text-align: center;
+	padding-bottom: 10px;
+	font-size: 14px;
+	color: #000;
+}
+.deal p.on{
+	line-height: 2em;
+}
+.deal strong{
+	display: block;
+	padding: 10px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

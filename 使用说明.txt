@@ -1,0 +1,45 @@
+1、Backup:	网站数据备份目录
+
+2、data：	网站数据库数据文件（ymgshop.sql）
+
+3、Upload:	上传商品图片目录
+
+4、YMGSHOP: 商城系统目录
+
+5、admin.php： 登入后台的文件
+
+6、index.php: 商城系统入口
+
+7、ymgshop.mwb 数据模型
+
+8、hdphp: 商城系统框架目录，框架入口文件（hdphp/index.php）
+
+9、hdphp框架的的基类模型文件(M)：hdphp\hdphp\Lib\Driver\Model\Model.class.php
+
+8、hdphp框架的的基类控制器文件(C)：hdphp\hdphp\Lib\Core\Controller.class.php
+
+9、hdphp框架第三方工具目录：hdphp\hdphp\Extend\Org
+
+10、hdphp框架第三方工具类目录：hdphp\hdphp\Extend\Tool
+
+11、商城系统的前台模块控制器目录：YMGSHOP\Index\Controller
+
+12、商城系统的后台模块控制器目录：YMGSHOP\Admin\Controller
+
+13、商城系统的前后台模块公用模型目录：YMGSHOP\Common\Model
+
+14、商城系统的前台模块模型目录：YMGSHOP\Index\Model
+
+15、商城系统的后台模块模型目录：YMGSHOP\Admin\Model
+
+16、商城系统的会员模块模型目录：YMGSHOP\Member\Model
+
+17、商城系统的会员模块控制器目录：YMGSHOP\Member\Controller
+
+18、商城系统的配置目录：YMGSHOP\Common\Config
+
+19、各模块模板的编译目录：YMGSHOP\Temp\Compile
+
+
+
+

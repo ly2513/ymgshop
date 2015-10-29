@@ -1,0 +1,125 @@
+#big{
+	margin: auto;
+	width: 980px;
+	background: red;
+
+}
+#big .mbg {
+    background: #FFF;
+    float: left;
+    padding-top: 20px;
+    width: 980px;
+	margin-bottom: 50px;
+}
+/*左侧*/
+#big .mbg .member_option{
+	float: left;
+	width: 168px;
+	overflow: hidden;
+}
+.member_option .myyoumeigo{
+	float: left;
+	width: 168px;
+	overflow: hidden;
+}
+.myyoumeigo1{
+	width: 166px;
+	border: 1px solid #DBDBDB;
+	float: left;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.myyoumeigo1 img{
+	height:262px;
+	 width:168px;
+}
+.myyoumeigo1 .menu{
+	float: left;
+	width: 166px;
+}
+.menu h2.showon,.menu h2.showoff,.menu h2.off{
+	cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 0px 0px 0px 20px;
+    width: 146px;
+}
+.menu h2.showon {
+    background: url('../image/guanzhu.jpg') no-repeat ;
+    color: #666;
+}
+.menu h2.on {
+    background: url('../image/guanzhu3.jpg') no-repeat;
+    color: #E60063;
+}
+.menu h2.showoff {
+    background: url('../image/guanzhu1.jpg') no-repeat ;
+    color: #666;
+}
+.menu h2.off {
+    background: url('../image/guanzhu2.jpg') no-repeat ;
+    color: #E60063;
+}
+.myyoumeigo1 .menu ul{
+    width: 166px;
+    float: left;
+    display: none;
+}
+.menu ul li {
+    display: inline;
+    float: left;
+    margin: 3px 0px 0px 30px;
+    width: 130px;
+    clear: both;
+    background: url('../image/l_05.jpg') no-repeat  0px 10px ;
+    list-style: none;
+    line-height: 22px;
+}
+.menu ul li a {
+   	color: #333;
+    padding-left: 5px;
+    text-decoration: none;
+    font-family: 宋体;
+}
+.menu ul li a.cur{
+    font-weight: 700;
+}
+/*右侧*/
+#big .mbg .youmeigo2{
+	width: 792px;
+	float: right;
+	
+}
+#big .mbg .youmeigo2 iframe{
+	width: 792px;
+	float: right;
+    height: 800px;
+    overflow-y:auto; 	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

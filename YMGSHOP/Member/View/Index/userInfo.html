@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>修改个人信息</title>
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/css/userInfo.css" />
+<script type="text/javascript" src="__CONTROLLER_VIEW__/js/jquery.js"></script>
+<script type="text/javascript" src="__CONTROLLER_VIEW__/js/userInfo.js"></script>
+</head>
+<body>
+	<div class="h_section_R">
+		<div class="txtbox">
+			<h2></h2>
+			<form action="" method="post">
+				<div class="txt">
+					<h3>修改个人信息</h3>
+					<div class="txtsm">
+						恭喜您成为优美购会员！请完整填写以下个人信息（<span class="red">*</span> 为必填）
+            		</div>
+            		<table  class="tleft" width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr >
+								<td width="88" style="width:90px;">
+									<span class="red">*</span>  邮箱：
+								</td>
+								<td colspan="2">
+									<input type="text" name="email" value="{$data.emile}" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="red">*</span> 真实姓名：
+								</td>
+								<td colspan="2" style="text-align: left">
+									<input type="text" name="name" value="{$data.name}" id="truename"/>
+									<label class="error" id="truenameinfo">请输入真实姓名</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="red">*</span> 省/市/区县：
+								</td>
+								<td colspan="2" style="text-align: left">
+									<select name="province" id="province">
+									<option value="0">请选择省份</option>
+									<list from="$provincedata" name="$d">
+										<option value="{$d.ProvinceID}" <if value="{$data.province}=={$d.ProvinceName}">selected=""</if>{$d.ProvinceName}></option>
+									</list>	
+									</select>
+									<select name="city" id="city">
+										<option value="0">请选择城市</option>
+									<list from="$citydata" name="$d">
+										<option value="{$d.CityID}" <if value="{$data.city}=={$d.CityName}">selected=""</if>{$d.ProvinceName}></option>
+									</list>	
+
+									</select>
+									<select name="area" id="area">
+										<option value="0">请选择区县</option>
+									<list from="$citydata" name="$d">
+										<option value="{$d.CityID}" <if value="{$data.city}=={$d.CityName}">selected=""</if>{$d.ProvinceName}></option>
+									</list>	
+									</select>
+									<label  id="areainfo"></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="red">*</span> 联系地址：
+								</td>
+								<td colspan="2" style="text-align: left">
+									<input type="text" class="px300" name="addr_content" value="{$data.addr_content}" id="address"/>
+									<label  id="addressinfo"></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="red">*</span>  邮政编码：
+								</td>
+								<td colspan="2" style="text-align: left">
+									<input type="text" name="postcode" id="postcode" value="{$data.postcode}" />
+									<label  id="postcodeinfo"></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="red">*</span>  手机：
+								</td>
+								<td colspan="2" style="text-align: left">
+									<input type="text" name="phone"  value="{$data.phone}" />
+									<label  id="phoneinfo"></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="red">*</span>  电话：
+								</td>
+								<td colspan="2" style="text-align: left">
+									<input type="text" name="tel"  value="{$data.tel}" id="telphone" />
+									<label  id="telinfo"></label>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="2" style="text-align: left">
+									<input type="submit"  value="提交" class="btn" id="id="savemessage""/>
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

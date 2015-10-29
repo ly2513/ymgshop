@@ -1,0 +1,222 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 宋体;
+}
+#big{
+	height: 117px;
+	width: 1200px;
+	margin:0 auto;
+}
+#big .logo{
+    float: left;
+}
+#big .logo img{
+    height: 117px;
+}
+#big .order_right{
+	background-image: url('../image/progressBar.gif');
+	background-position: 0px -54px;
+	float: right;
+	margin-top: 43px;
+	width: 618px;
+	height: 25px;
+}
+#order{
+	width: 1200px;
+	margin: 0 auto;
+}
+#order .order_main{
+	width: 1198px;
+	margin: 0px auto;
+	border: 1px solid #EBEBEB;
+	padding-top: 15px;
+	overflow: hidden;
+	float: left;
+	margin-bottom: 40px;
+}
+#order .order_main .paytitle{
+	width: 844px;
+	margin: 0px auto;
+	font-size: 12px;
+}
+#order .order_main .paytitle span {
+    width: 1198px;
+    font-size: 12px;
+    color: #666;
+    padding-top: 5px;
+    height: auto;
+    overflow: hidden;
+}
+.payxx{
+    width: 844px;
+    margin: 0px auto;
+    font-family: 宋体;
+}
+.pay-info-line {
+    padding: 5px 0px;
+    text-indent: 23px;
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 10px;
+	width: 844px;
+}
+.price-icon {
+ 
+}
+.pay-line {
+    color: #F0F0F0;
+    margin: 0px 8px 0px 3px;
+    height: 16px;
+    line-height: 16px;
+}
+.red {
+    color: #DA0075;
+    font-family: arial;
+    text-decoration: none;
+    float: left;
+}
+.pay_table{
+	padding-left: 13px;
+	text-align: center;
+	line-height: 22px;
+	color: #555;
+	clear: both;
+	height: 20px;
+}
+.pay_table td {
+    line-height: 14px;
+    border-right: 1px solid #F0F0F0;
+    padding: 0px 8px;
+    font-family: 宋体;
+}
+.order_info {
+    margin: 8px 0px 24px;
+    text-indent: 24px;
+    line-height: 34px;
+    border-top: 1px solid #F0F0F0;
+    float: left;
+    width: 844px;
+    text-align: center;
+}
+.order_info a{
+	display: block;
+	text-align: center;
+	line-height: 35px;
+}
+.red_line {
+    color: #DA0075;
+    height: 16px;
+	float: left;
+	line-height: 35px;
+}
+
+.banks,.banks .bstitle{
+	margin: 0 auto;
+	float: left;
+}
+
+.banks .bstitle ul{
+	list-style: none;
+}
+.banks .bstitle ul li{
+	float: left;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 700;
+	color: #262626;
+	display: block;
+}
+.banks .bstitle ul li.bb1{
+	width: 175px;
+	border-bottom: 1px solid #EBEBEB;
+	height: 32px;
+}
+.banks .bstitle ul li.bb3{
+	width: 123px;
+	border-left: 1px solid #EBEBEB;
+	border-right: 1px solid #EBEBEB;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #EBEBEB;
+	background: #F5F5F5;
+	cursor: pointer;
+}
+.banks .bstitle ul li.on{
+	background:#FFF;
+	border-bottom: 1px solid #FFF;
+}
+.banks .bstitle li.bb4 {
+    width: 897px;
+    border-bottom: 1px solid #EBEBEB;
+    height: 32px;
+}
+.banks .bks1{
+    width: 840px;
+    padding-top: 10px;
+    overflow: hidden;
+  /*  display: none;*/
+    margin: 0px auto;
+}
+.bks1 .t1 {
+    width: 960px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #4D4D4D;
+    float: left;
+}
+.bks1 dl {
+    width: 142px;
+    height: 32px;
+    border: 1px solid #EBEBEB;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    float: left;
+    display: block;
+}
+.bks1 dt {
+    width: 22px;
+    height: 32px;
+    float: left;
+}
+.bks1 dl input {
+    margin: 10px 0px 0px 8px;
+    width: 13px;
+    height: 13px;
+}
+.bks1 dd {
+    width: 120px;
+    height: 32px;
+    float: left;
+}
+.bks1 dd img {
+    width: 120px;
+    height: 32px;
+}
+.bks1 .t2 {
+    width: 960px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #4D4D4D;
+    float: left;
+}
+.paynow {
+    width: 840px;
+    padding-top: 48px;
+    position: relative;
+    margin: 0px auto;
+
+    padding: 15px 0px;
+}
+.paynow input{
+	margin-left:283px;
+	margin-bottom: 20px;
+	width: 278px;
+	height: 48px;
+}
+

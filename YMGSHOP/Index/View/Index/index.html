@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>优美购首页</title>
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/css/css.css" />
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/css/public.css" />
+<script type="text/javascript" src="__CONTROLLER_VIEW__/js/jquery.js"></script>
+<script type="text/javascript" src="__CONTROLLER_VIEW__/js/js.js"></script>
+<script type="text/javascript" src="__CONTROLLER_VIEW__/js/public.js"></script>
+</head>
+<body>
+	<include file="__CONTROLLER_VIEW__/block/header.html"/>
+	<!-- big start -->
+	<div id="big">
+		<!-- 轮播图区域开始 -->
+		<div id="bigimg">
+			<div class="lunul">
+				<ul id="lunimg">
+					<li><a href="javascript:;"><img src="__CONTROLLER_VIEW__/image/bigimg1.jpg" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="__CONTROLLER_VIEW__/image/bigimg2.jpg" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="__CONTROLLER_VIEW__/image/bigimg3.jpg" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="__CONTROLLER_VIEW__/image/bigimg4.jpg" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="__CONTROLLER_VIEW__/image/bigimg5.jpg" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="__CONTROLLER_VIEW__/image/bigimg6.jpg" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="__CONTROLLER_VIEW__/image/bigimg1.jpg" alt="" /></a></li>
+				</ul>
+			</div>
+			<!-- 小圆点 -->
+			<ul class="round">
+				<li class="cur">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+			<!-- 箭头 -->
+			<i class="jiantou left">&#xf016e;</i>
+			<i class="jiantou right">&#xf016d;</i>
+		</div>
+		<!-- 轮播图区域结束 -->
+		
+		<!-- 产品区域开始 -->
+		<div id="main">	
+		<!-- 产品活动区域开始 -->
+			<div class="shopaction">
+				<a href="#hotgoods"><img src="__CONTROLLER_VIEW__/image/action1.jpg" alt="" /></a>
+				<a href="#newgoods"><img src="__CONTROLLER_VIEW__/image/1838.jpg" alt="" /></a>
+				<a href="{|U:'lists',array('cid'=>206)}"><img src="__CONTROLLER_VIEW__/image/action2.jpg" alt="" /></a>
+				<a href="{|U:'lists',array('cid'=>9)}"><img src="__CONTROLLER_VIEW__/image/action3.jpg" alt="" /></a>
+				<a href="{|U:'lists',array('cid'=>20)}"><img src="__CONTROLLER_VIEW__/image/action4.jpg" alt="" /></a>
+			</div>
+		<!-- 产品活动区域结束 -->
+		<!-- 原创热销区域开始 -->
+			<div class="yc" id="hotgoods">
+				<p><img src="__CONTROLLER_VIEW__/image/ad1.jpg" alt="" /></p>
+				<div class="more">
+					<span><a href="javascript:;">T恤/毛衫/连衣裙</a></span>
+				</div>
+				<div class="hotgoogstop">
+					<div class="line"></div>
+					<span><a href="{|U:'detail',array('gid'=>34)}"><img src="__CONTROLLER_VIEW__/image/1836.jpg" alt="" /></a></span>
+					<span><a href="{|U:'detail',array('gid'=>35)}"><img src="__CONTROLLER_VIEW__/image/1837.jpg" alt="" /></a></span>
+				</div>
+				<div class="hotgoods" >
+					<list from="$hotgoods" name="$d" >
+					<dl>
+						<dt><a href="{|U:'detail',array('gid'=>$d['gid'])}"><img src="__ROOT__/{$d.goods_thumb}" alt="" style=" height:262px; width:193px" /></a></dt>
+						<dd class="dd">
+							<p>
+								<span class="goods_num">总销
+									<span>17584</span>件
+								</span>
+								<span class="goods_list">1</span>
+							</p>
+							<p>
+								<a href="{|U:'detail',array('gid'=>$d['gid'])}">{$d.goods_name}</a>
+								<span class="price">RMB:<span>{$d.goods_price}</span></span>
+							</p>
+						</dd>
+					</dl>
+					</list>
+				</div>
+			</div>
+		<!-- 原创热销区域结束 -->
+		<!-- 原创折扣区域开始 -->
+			<div class="yc" id="newgoods">
+				<p><img src="__CONTROLLER_VIEW__/image/ad2.jpg" alt="" /></p>
+				<div class="more">
+					<span><a href="{|U:'lists',array('cid'=>1)}">更多/MORE ></a></span>
+				</div>
+				<div class="zkgoods">
+					<list from="$newgoods" name="$d" >
+					<dl>
+						<dt >
+							<a href="{|U:'detail',array('gid'=>$d['gid'])}" ><img src="__ROOT__/{$d.goods_img}" alt="" /></a>
+							<!-- 这盖标题 -->
+							<span class="title" style="display:none">
+								<p class="t">
+									<a href="">{$d.goods_name}</a>
+								</p>
+								<p class="s">已售:428件</p>
+							</span>
+							<span class="titlebg" style="display:none"></span>
+						</dt>
+						<dd>
+							<div class="sales">
+								<p class="rmb">
+									￥{$d.goods_price}
+									<del>￥{$d.market_price}</del>
+								</p>
+								<p class="getto">
+									<a href="{|U:'detail',array('gid'=>$d['gid'])}"><img src="__CONTROLLER_VIEW__/image/qianggou.jpg" alt="" /></a>
+								</p>
+							</div>
+						</dd>
+					</dl>
+					</list>
+					
+				</div>
+			</div>
+		<!-- 原创新品区域结束 -->
+		<!-- 商品类型导航图片开始-->
+			<div class="imgnav">
+				<a href="{|U:'lists',array('cid'=>10)}"><img src="__CONTROLLER_VIEW__/image/nav1.jpg" alt="" /></a>
+				<a href="{|U:'lists',array('cid'=>14)}"><img src="__CONTROLLER_VIEW__/image/nav2.jpg" alt="" /></a>
+				<a href="{|U:'lists',array('cid'=>33)}"><img src="__CONTROLLER_VIEW__/image/nav3.jpg" alt="" /></a>
+				<a href="{|U:'lists',array('cid'=>206)}"><img src="__CONTROLLER_VIEW__/image/nav4.jpg" alt="" /></a>
+				<a href="{|U:'lists',array('cid'=>42)}"><img src="__CONTROLLER_VIEW__/image/nav5.jpg" alt="" /></a>
+				<a href="{|U:'lists',array('cid'=>20)}"><img src="__CONTROLLER_VIEW__/image/nav6.jpg" alt="" /></a>
+			</div>
+		<!-- 商品类型导航图片结束 -->
+		<!-- 针织衫产品区域开始 -->
+			<div class="zzs">
+				<div id="zzs">
+					<a href="{|U:'lists',array('cid'=>206)}"><img src="__CONTROLLER_VIEW__/image/zzs.jpg" alt="" /></a>
+				</div>
+				<div class="proimg">
+					<goodslist cid="206"  row="5">
+					<dl>
+						<dt>
+							<a href="{|U:'detail',array('gid'=>$field['gid'])}"><img src="__ROOT__/{$field.goods_thumb}" alt="" /></a>
+						</dt>
+						<dd>
+							<p class="title">
+								<a href="{|U:'detail',array('gid'=>$field['gid'])}">{$field.goods_name}</a>
+							</p>
+							<p class="sales">
+								<a href="{|U:'detail',array('gid'=>$field['gid'])}">
+									<span class="rmb">￥{$field.goods_price}</span>
+									<del>￥{$field.market_price}</del>
+								</a>
+							</p>
+						</dd>
+					</dl>
+					</goodslist>
+				</div>
+			</div>
+		<!-- 针织衫产品区域开始 -->
+		<!-- 外套产品区域开始 -->
+			<div class="zzs">
+				<div id="zzs">
+					<a href="{|U:'lists',array('cid'=>20)}">
+						<img src="__CONTROLLER_VIEW__/image/wt.jpg" alt="" />
+					</a>
+				</div>
+				<div class="proimg">
+					<goodslist cid="20"  row="5">
+					<dl>
+						<dt>
+							<a href="{|U:'detail',array('gid'=>$field['gid'])}"><img src="__ROOT__/{$field.goods_thumb}" alt="" /></a>
+						</dt>
+						<dd>
+							<p class="title">
+								<a href="">{$field.goods_name}</a>
+							</p>
+							<p class="sales">
+								<a href="{|U:'detail',array('gid'=>$field['gid'])}">
+									<span class="rmb">￥{$field.goods_price}</span>
+									<del>￥{$field.market_price}</del>
+								</a>
+							</p>
+						</dd>
+					</dl>
+					</goodslist>
+				</div>
+			</div>
+		<!-- 外套产品区域结束 -->
+		<!-- 体恤产品区域开始 -->
+			<div class="zzs">
+				<div id="zzs">
+					<a href="{|U:'lists',array('cid'=>10)}"><img src="__CONTROLLER_VIEW__/image/tx.jpg" alt="" /></a>
+				</div>
+				<div class="proimg">
+					<goodslist cid="10"  row="5">
+					<dl>
+						<dt>
+							<a href="{|U:'detail',array('gid'=>$field['gid'])}"><img src="__ROOT__/{$field.goods_thumb}" alt="" /></a>
+						</dt>
+						<dd>
+							<p class="title">
+								<a href="">{$field.goods_name}</a>
+							</p>
+							<p class="sales">
+								<a href="{|U:'detail',array('gid'=>$field['gid'])}">
+									<span class="rmb">￥{$field.goods_price}</span>
+									<del>￥{$field.market_price}</del>
+								</a>
+							</p>
+						</dd>
+					</dl>
+					</goodslist>
+
+				</div>
+			</div>
+		<!-- 体恤产品区域结束 -->
+		<!-- 衬衫产品区域开始 -->
+			<div class="zzs">
+				<div id="zzs">
+					<a href="{|U:'lists',array('cid'=>14)}"><img src="__CONTROLLER_VIEW__/image/cs.jpg" alt="" /></a>
+				</div>
+				<div class="proimg">
+					<goodslist cid="14" row="10" >
+					<dl>
+						<dt>
+							<a href="{|U:'detail',array('gid'=>$field['gid'])}"target="_brank"> <img src="__ROOT__/{$field.goods_img}" alt="" /></a>
+						</dt>
+						<dd>
+							<p class="title">
+								<a href="{|U:'detail',array('gid'=>$field['gid'])}" target="_brank">{$field.goods_name}</a>
+							</p>
+							<p class="sales">
+								<a href="{|U:'detail',array('gid'=>$field['gid'])}" target="_brank">
+									<span class="rmb">￥{$field.goods_price}</span>
+									<del>￥{$field.market_price}</del>
+								</a>
+							</p>
+						</dd>
+					</dl>
+					</goodslist>
+				</div>
+			</div>
+		<!-- 衬衫产品区域结束 -->
+		<!-- 连衣裙区域开始 -->
+			<div class="zzs">
+				<div id="zzs">
+					<a href="{|U:'lists',array('cid'=>33)}"><img src="__CONTROLLER_VIEW__/image/lyq.jpg" alt="" /></a>
+				</div>
+				<div class="proimg">
+				<goodslist cid="33"  row="5">
+					<dl>
+						<dt>
+							<a href="{|U:'detail',array('gid'=>$field['gid'])}"><img src="__ROOT__/{$field.goods_thumb}" alt="" /></a>
+						</dt>
+						<dd>
+							<p class="title">
+								<a href="">{$field.goods_name}</a>
+							</p>
+							<p class="sales">
+								<a href="{|U:'detail',array('gid'=>$field['gid'])}">
+									<span class="rmb">￥{$field.goods_price}</span>
+									<del>￥{$field.market_price}</del>
+								</a>
+							</p>
+						</dd>
+					</dl>
+				</goodslist>
+				</div>
+			</div>
+		<!-- 连衣裙区域结束 -->
+		<!-- 裤装区域开始 -->
+			<div class="zzs">
+				<div id="zzs">
+					<a href="{|U:'lists',array('cid'=>42)}"><img src="__CONTROLLER_VIEW__/image/kz.jpg" alt="" /></a>
+				</div>
+				<div class="proimg">
+				<goodslist cid="42"  row="5">
+					<dl>
+						<dt>
+							<a href="{|U:'detail',array('gid'=>$field['gid'])}"><img src="__ROOT__/{$field.goods_thumb}" alt="" /></a>
+						</dt>
+						<dd>
+							<p class="title">
+								<a href="">{$field.goods_name}</a>
+							</p>
+							<p class="sales">
+								<a href="{|U:'detail',array('gid'=>$field['gid'])}">
+									<span class="rmb">￥{$field.goods_price}</span>
+									<del>￥{$field.market_price}</del>
+								</a>
+							</p>
+						</dd>
+					</dl>
+				</goodslist>
+
+				</div>
+			</div>
+		<!-- 裤装区域结束 -->
+		</div>
+		<!-- 产品区域结束 -->
+	</div>
+	<!-- big end -->
+	<include file="__CONTROLLER_VIEW__/block/foot.html"/>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<title>站点配置项</title>
+<hdjs/>
+
+</head>
+<body>
+    <div class="warp">
+    <form action="" method="post">
+        <div class="menu_list">
+            <ul>
+                <li><a href="{|U:'index'}" class="action">配置列表</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab hd-form">
+        <ul class="tab_menu">
+            <li lab="base" ><a >网站基本配置</a></li>
+            <li lab="other" ><a >其他配置</a></li>
+        </ul>
+        <div class="tab_content">
+             
+            <div id="base" class="action">
+                <table class="table1 ">
+                    <list from="$data" name="$v" stop="5">
+                    <tr>
+                        <td class="w100">{$v.title}</td>
+                        <td class="w100">{$v.html}</td>
+                        <td class="w150">{$v.orderlist}</td>
+                    </tr>
+                    </list>
+                </table>
+            </div>
+            <div id="other">
+               
+            </div>
+            
+        </div>
+        <div class="position-bottom">
+            <input type="submit" class="hd-success" value="保存"/>
+        </div>
+        </form>
+    </div>
+        <!--  <table class="table1">
+            <tr>
+                <th colspan="100">验证码配置</th>
+            </tr>
+            <foreach from="$data" value="$v">
+             <if value="$v['type_id'] eq 2">
+            <tr>
+                <td class="w100">{$v.name}</td>
+                <td class="w100">
+                <input type="text" name="{$v.name}" id="" value="{$v.value}"/>
+                </td>
+               <td class="w150">{$v.title}</td>   
+              <td class="w150">{$v.des}</td>
+            </tr>
+            </if>
+            </foreach>
+        </table>
+            <table class="table1">
+            <tr>
+                <th colspan="100">水印配置</th>
+            </tr>
+            <foreach from="$data" value="$v">
+             <if value="$v['type_id'] eq 3">
+            <tr>
+                <td class="w100">{$v.name}</td>
+                <td class="w100">
+                <input type="text" name="{$v.name}" id="" value="{$v.value}"/>
+                </td>
+               <td class="w150">{$v.title}</td>   
+              <td class="w150">{$v.des}</td>
+            </tr>
+            </if>
+            </foreach>
+        </table>
+         <table class="table1">
+            <tr>
+                <th colspan="100">缩略图配置</th>
+            </tr>
+            <foreach from="$data" value="$v">
+             <if value="$v['type_id'] eq 4">
+            <tr>
+                <td class="w100">{$v.name}</td>
+                <td class="w100">
+                <input type="text" name="{$v.name}" id="" value="{$v.value}"/>
+                </td>
+               <td class="w150">{$v.title}</td>   
+              <td class="w150">{$v.des}</td>
+            </tr>
+             <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            </if>
+            </foreach>
+        </table> -->
+
+</body>
+</html>

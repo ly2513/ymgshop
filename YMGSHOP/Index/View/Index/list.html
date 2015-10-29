@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>商城列表</title>
+<hdjs/>
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/css/list.css" />
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/css/public.css" />
+<script type="text/javascript" src="__CONTROLLER_VIEW__/js/jquery.js"></script>
+<script type="text/javascript" src="__CONTROLLER_VIEW__/js/list.js"></script>
+<script type="text/javascript" src="__CONTROLLER_VIEW__/js/public.js"></script>
+</head>
+<body>
+	<!-- header start -->
+	<include file="__CONTROLLER_VIEW__/block/header.html"/>
+	<!-- header end -->
+	<!-- big start -->
+	<div id="big">
+		<div id="main">
+		<!-- 导航开始 -->
+			<div class="title_list">
+			
+				<a href="">首页</a>  >
+				<list from="$allparent" name="$d">
+			
+				<a href="">{$d.cat_name}</a>  >
+				</list>
+				<span>(共39件)</span>
+			</div>
+			<!-- 导航结束 -->
+			<!-- left start -->
+			<div class="list_left">
+				<div class="left">
+					<!-- <h3><img src="__CONTROLLER_VIEW__/image/ms.jpg" alt="" /></h3> -->
+					<!-- 衣服款式分类 -->
+					<div class="cate_list">
+						<list from="$categorydata" name="$d">
+						<dl>
+							<dt><a href="{|U:'lists',array('cid'=>$d['cid'])}">{$d.cat_name}</a></dt>
+							<list from="$d._data" name="$c">
+							<dd><a href="{|U:'lists',array('cid'=>$c['cid'])}">{$c.cat_name}</a></dd>
+							</list>
+						</dl>
+						</list>
+					</div>
+					<!-- hot recomment start-->
+					<div class="hotrecomment">
+						<h3>本站热卖推荐</h3>
+						<p>
+						<list from="$hotgoods" name="$d" row="5" start="6">
+							<a href="{|U:'detail',array('gid'=>$d['gid'])}"><img src="__ROOT__/{$d.goods_img}" alt="" /></a>
+							<span class="goodsname">
+								<a href="{|U:'detail',array('gid'=>$d['gid'])}">{$d.goods_name}</a>
+							</span>
+							<span class="goodsprice">￥{$d.goods_price}</span>
+						</list>
+							
+						</p>
+					</div>
+					<!-- hot recomment end-->
+				</div>
+				<!-- hot googs TOP  start-->
+				<div class="hotTop">
+					<h2>热卖排行榜</h2>
+					<ul>
+						<list from="$hotgoods" name="$d" row="5">
+						<li>
+							<a href="{|U:'detail',array('gid'=>$d['gid'])}"><img src="__ROOT__/{$d.goods_img}" alt="" /></a>
+							<span class="goodsname">
+								<a href="{|U:'detail',array('gid'=>$d['gid'])}">{$d.goods_name}</a>
+							</span>
+							<span class="goodsprice">￥{$d.goods_price}</span>
+						</li>
+						</list>
+					</ul>
+				</div>
+				<!-- hot googs TOP  start-->
+				<div class="hotTop">
+					<h1>毛衫全部商品冬季专区</h1>
+					<ul>
+						<li class="description">
+							毛衫全部商品冬季所然专区，专业毛衫全部商品冬季品牌名家设计，潮流新款引爆毛衫全部商品冬季风潮。毛衫全部商品冬季网购领先品牌，30天免费退换货，货到付款，欲购从速哦！
+						</li>
+					</ul>
+				</div>
+				<!-- 历史记录开始 -->
+				<div class="hotTop">
+					<h2>最近浏览记录</h2>
+					<ul>
+						<li>
+							<a href=""><img src="__CONTROLLER_VIEW__/image/hotgoods1.jpg" alt="" /></a>
+							<span class="goodsname">
+								<a href="">魅力时尚个性高领套头</a>
+							</span>
+							<span class="goodsprice">￥200:00</span>
+						</li>
+						<li>
+							<a href=""><img src="__CONTROLLER_VIEW__/image/hotgoods2.jpg" alt="" /></a>
+							<span class="goodsname">
+								<a href="">魅力时尚个性高领套头</a>
+							</span>
+							<span class="goodsprice">￥200:00</span>
+						</li>
+						<li>
+							<a href=""><img src="__CONTROLLER_VIEW__/image/hotgoods3.jpg" alt="" /></a>
+							<span class="goodsname">
+								<a href="">魅力时尚个性高领套头</a>
+							</span>
+							<span class="goodsprice">￥200:00</span>
+						</li>
+					</ul>
+				</div>
+				<!-- 历史记录结束 -->
+			</div>
+			<!-- left end -->
+			<!-- right start -->
+			<div class="list_right">
+				<!--热卖推荐开始 -->
+				<div class="hot_buy">
+					<h3>热卖推荐</h3>
+					<ul>
+						<list from="$hotdata" name="$d">
+						<li>
+							<a href="{|U:'detail',array('gid'=>$d['gid'])}"><img src="__ROOT__/{$d.goods_thumb}" alt="" /></a>
+							<p>
+								<span class="hottuijiantitle">{$d.goods_name}</span>
+							<em>
+								<i>￥</i>
+								<span class="hottuijianprice">{$d.goods_price}</span>
+							</em>
+							<a href="{|U:'detail',array('gid'=>$d['gid'])}" class="buy">立即抢购</a>
+							</p>	
+						</li>
+						</list>
+					</ul>
+				</div>
+				<!--热卖推荐结束 -->
+				<!-- search start -->
+				<div class="search">
+					<div class="you_search">
+						<list from="$attr" name="$d">
+						<dl>
+							<dt>{$d.attr_name}
+								<span>{|getlink:$hd['list']['d']['index'],0,'重置'}	</span>  
+							</dt>
+								
+							<dd>
+								<div class="contentdd">
+									<list from="$d._value" name="$c">
+									<span >
+										{|getlink:$hd['list']['d']['index'],$c['id'],$c['attr_value']}
+									</span>
+									</list>
+								</div>
+							</dd>
+						</dl>
+						</list>
+
+					</div>
+					<div class="rollbut">
+						<img src="__CONTROLLER_VIEW__/image/rollup.jpg" alt=""  class="on"/><!-- 展开 -->
+						<img src="__CONTROLLER_VIEW__/image/rolldown.jpg" alt=""  class="down"/><!-- 收起 -->
+					</div>
+				</div>
+				<!-- search end -->
+				
+				<!-- 右侧产品区域-->
+				<div class="filter">
+					<div class="topdiv">
+						<div class="shping">
+							<div class="topdiv_on">
+								<a href="javascript:;" class="" onclick="paixu(this,1)">
+									<span>默认</span>
+									<i class="icon">&#xf0111;</i>
+								</a>
+							</div>
+							<div class="topdiv_on">
+								<a href="javascript:;" class="" onclick="paixu(this,2)">
+									<span>销量</span>
+									<i class="icon">&#xf0111;</i>
+								</a>
+							</div>
+							<div class="topdiv_on">
+								<a href="javascript:;" class="" onclick="paixu(this,3)">
+									<span>好评</span>
+									<i class="icon">&#xf0111;</i>
+								</a>
+							</div>
+							<div class="topdiv_on">
+								<a href="javascript:;" class="" onclick="paixu(this,4)">
+									<span>最新</span>
+									<i class="icon">&#xf0111;</i>
+								</a>
+							</div>
+							<div class="topdiv_on">
+								<a href="javascript:;" class="" onclick="paixu(this,5)">
+									<span>价格</span>
+									<i class="icon">&#xf0113;</i>
+								</a>
+							</div>
+							<div class="topdiv_on">
+								<a href="javascript:;" class="" onclick="paixu(this,6)">
+									<span>价格</span>
+									<i class="icon">&#xf0111;</i>
+								</a>
+							</div>
+						</div>
+						<!-- <div class="pricechoose">
+							<div class="pricetext">
+								<span>
+									<input type="text" value="￥" maxlength="8" />
+								</span>
+								<i>-</i>
+								<span>
+									<input type="text" value="￥" maxlength="8" />
+								</span>
+							</div>
+							<div class="checkbtn1">
+								<a href="javascript:void(0)" class="close">清空</a>
+								<a href="javascript:void(0)" class="ok">确定</a>
+							</div>	
+						</div> -->
+						<!-- <div class="filtermenu">
+							<input type="hidden" />
+							<label >
+								<input type="checkbox" />
+								促销商品
+							</label>
+						</div> -->
+					</div>
+				</div>
+				<!-- 右侧产品列表 -->
+				<div class="goods_list">
+					<list from="$data_" name="$d">
+					
+						<dl class="goods_list_dl">
+							<dt>
+								<a href="{|U:'detail',array('gid'=>$d['gid'])}">
+									<img src="__ROOT__/{$d.goods_thumb}" alt="" />
+								</a>
+								<p></p>
+								<div class="sizebox">
+									<!-- <span>
+										<i>尺码:</i>
+									</span> -->
+									<img src="__CONTROLLER_VIEW__/image/start.jpg" alt="" />
+								</div>	
+								<if value="{$d.is_hot}==1">
+								<div class="hot">热销</div>
+								</if>
+								<div class="colorbox">
+									<a href="{|U:'detail',array('gid'=>$d['gid'])}" size="<b> M </b>"><img src="__CONTROLLER_VIEW__/image/bluebox.jpg" alt="" /></a>
+									<a href="{|U:'detail',array('gid'=>$d['gid'])}" size="<b> S | M | L | XL</b>"><img src="__ROOT__/{$d.goods_img}" alt="" /></a>
+								</div>
+							</dt>
+							<dd>
+								<span>
+									<i>￥{$d.goods_price}</i>
+									<del>￥{$d.market_price}</del>
+								</span>
+								<a href="" style="display:block">{$d['goods_name']}</a>
+								<a href="">
+									<strong>评论<b> <?php echo mt_rand(1000,9000);?>条</b></strong>
+								</a>
+							</dd>
+						</dl>
+					</list>
+					
+				</div>
+				<div class="page1">
+					{$page}
+				</div>
+			</div>
+			<!-- right end -->
+		</div>
+
+	</div>
+	<!-- big end -->
+	<!-- foot start -->
+		<include file="__CONTROLLER_VIEW__/block/foot.html"/>
+	<!-- foot end -->
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,176 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <div class="main">
+        <h1>IconFont 图标</h1>
+        <ul class="icon_lists clear">
+            
+                <li>
+                <i class="icon iconfont">&#xf01db;</i>
+                    <div class="name">童装</div>
+                    <div class="code">&amp;#xf01db;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#x3465;</i>
+                    <div class="name">女装</div>
+                    <div class="code">&amp;#x3465;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe607;</i>
+                    <div class="name">女装NF</div>
+                    <div class="code">&amp;#xe607;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0009;</i>
+                    <div class="name">童装</div>
+                    <div class="code">&amp;#xf0009;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe603;</i>
+                    <div class="name">男装</div>
+                    <div class="code">&amp;#xe603;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#x3461;</i>
+                    <div class="name">男装</div>
+                    <div class="code">&amp;#x3461;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf009a;</i>
+                    <div class="name">高跟鞋</div>
+                    <div class="code">&amp;#xf009a;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe64e;</i>
+                    <div class="name">高跟鞋</div>
+                    <div class="code">&amp;#xe64e;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#x346d;</i>
+                    <div class="name">鞋</div>
+                    <div class="code">&amp;#x346d;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf006f;</i>
+                    <div class="name">登山鞋</div>
+                    <div class="code">&amp;#xf006f;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0098;</i>
+                    <div class="name">护肤品</div>
+                    <div class="code">&amp;#xf0098;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#x3452;</i>
+                    <div class="name">珠宝饰品</div>
+                    <div class="code">&amp;#x3452;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#x3464;</i>
+                    <div class="name">包包</div>
+                    <div class="code">&amp;#x3464;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#x3458;</i>
+                    <div class="name">鞋/包</div>
+                    <div class="code">&amp;#x3458;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0021;</i>
+                    <div class="name">包NF</div>
+                    <div class="code">&amp;#xf0021;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf002b;</i>
+                    <div class="name">鞋子NF</div>
+                    <div class="code">&amp;#xf002b;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0047;</i>
+                    <div class="name">运动</div>
+                    <div class="code">&amp;#xf0047;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0048;</i>
+                    <div class="name">内衣</div>
+                    <div class="code">&amp;#xf0048;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe65c;</i>
+                    <div class="name">内衣-线</div>
+                    <div class="code">&amp;#xe65c;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe63b;</i>
+                    <div class="name">潮流女装</div>
+                    <div class="code">&amp;#xe63b;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe638;</i>
+                    <div class="name">化妆品</div>
+                    <div class="code">&amp;#xe638;</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe603;</i>
+                    <div class="name">情趣内衣</div>
+                    <div class="code">&amp;#xe603;</div>
+                </li>
+            
+        </ul>
+
+
+        <div class="helps">
+            第一步：使用font-face声明字体
+            <pre>
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+</pre>
+第二步：定义使用iconfont的样式
+            <pre>
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+</pre>
+第三步：挑选相应图标并获取字体编码，应用于页面
+<pre>
+&lt;i class="iconfont"&gt;&amp;#x33&lt;/i&gt;
+</pre>
+        </div>
+
+    </div>
+</body>
+</html>

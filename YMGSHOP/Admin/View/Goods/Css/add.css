@@ -1,0 +1,51 @@
+#img_list img.list_img{
+	float: left;
+}
+@font-face {font-family: 'iconfont';
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:20px;
+    font-style:normal;
+    color: ;
+    margin: 10px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon{
+    font-family:"iconfont" !important;
+    font-size:15px;&#xf00b2;  &#xf00b3;
+    font-style:normal;
+    color: ;
+    margin: 10px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.true{
+	color: #1FA54C;
+}
+.false{
+	color: #CC0000;
+}
+ul#img_list{
+    list-style: none;
+    position: relative;
+}
+ul#img_list li{
+    float: left;
+}
+ul#img_list span{
+    line-height: 100px;
+    margin-left: 20px;
+    
+}
+
+
+

@@ -1,0 +1,562 @@
+/*列表页css*/
+/*大区域*/
+#big{
+	width: 100%;
+	height: 100%;
+	padding-bottom:50px;
+	background: url(../image/list_bg.jpg)repeat  center top; 
+	overflow: auto;
+	line-height: 22px;
+}
+#big #main{
+	width: 1200px;
+	margin:0 auto;
+	overflow: hidden;
+}
+#big #main .title_list{
+	margin: 10px;
+}
+#big #main .title_list a{
+	text-decoration: none;
+	color: #8F8F8F;
+}
+#big #main .title_list a:hover{
+	color: #E50056;
+}
+ #big #main .title_list span{
+	color: #333;
+}
+/*列表左侧*/
+#big #main .list_left{
+	width: 194px;
+	float: left;
+}
+#big #main .list_left .left{
+	width: 194px;
+}
+#big #main .list_left .cate_img{
+	width: 192px;
+}
+#big #main .list_left .cate_img h3{
+	text-align: center;
+	font-size: ;
+	font-weight: 700;
+	color: #000;
+	letter-spacing: 4px;
+}
+#big #main .list_left .cate_list{
+	width: 166px;
+	margin: 0 auto;
+	padding-bottom:17px;
+	line-height: 22px; 
+}
+#big #main .list_left .cate_list dl{
+	width: 156px;
+	margin-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #6D6767;
+}
+#big #main .list_left .cate_list dl dt{
+	font-weight: 700;
+	color: #000;
+}
+#big #main .list_left .cate_list dl dt a{
+	text-decoration: none;
+	color: #000;
+}
+#big #main .list_left .cate_list dl dd a{
+	text-decoration: none;
+	color: #8F8F8F;
+	width: 166px;
+	display: block;
+	line-height: 25px;
+	height: 25px;
+}
+#big #main .list_left .cate_list dl dd a:hover{
+	color: #E50056
+}
+/*热卖推荐*/
+.hotrecomment p img{
+	width: 184px;
+	height: 249px;
+}
+/*热卖排行榜*/
+#big #main .list_left .hotTop{
+	width: 100%;
+	margin-top: 12px;
+	padding-bottom: 50px;
+	background: #231910;
+	color: #FFF;
+	float: left;
+}
+#big #main .list_left .hotTop h1{
+	width: 156px;
+	margin: 0px auto;
+	padding-top: 50px;
+	font-weight: normal;
+	font-size: 24px;
+	font-family: 宋体;
+}
+#big #main .list_left .hotTop li.description{
+	font-family: 宋体;
+}
+#big #main .list_left .hotTop h2{
+	font-size: 16px;
+	line-height: 22px;
+	font-family: 宋体;
+}
+#big #main .list_left .hotTop ul{
+	width: 156px;
+	margin: 0px auto;
+	padding-top: 10px;
+	overflow: hidden;
+	list-style: none;
+}
+#big #main .list_left .hotTop ul li img{
+	width: 184px;
+	height: 249px;
+}
+span.goodsname a{
+	text-decoration: none;
+	color: #8F8F8F;
+}
+span.goodsname a:hover{
+	color:#E50056;
+}
+/*右侧开始*/
+#big #main .list_right{
+	width: 996px;
+	float: right;
+	overflow: hidden;
+}
+#big #main .list_right .hot_buy{
+	width: 994px;
+	border: 1px solid #E9E9E9;
+}
+#big #main .list_right .hot_buy h3{
+	font-size: 15px;
+	font-weight: 700;
+	font-family: 宋体;
+	color: #565656;
+	padding-left: 12px;
+	background: none repeat scroll 0% 0% #F3F3F3;
+}
+#big #main .list_right .hot_buy ul{
+	width: 100%;
+	overflow: hidden;
+	padding: 15px 0px;
+}
+#big #main .list_right .hot_buy ul li{
+	float: left;
+	width: 195px;
+	padding-left: 46px;
+	overflow: hidden;
+	color: #7F7F7F;
+}
+#big #main .list_right .hot_buy ul li a img{
+	width: 87px;
+	height: 119px;
+	float: left;
+}
+#big #main .list_right .hot_buy ul li p{
+	float: right;
+	width: 98px;
+}
+#big #main .list_right .hot_buy ul li p span.hottuijiantitle{
+	display: block;
+	padding-bottom: 40px;
+	line-height: 16px;
+}
+#big #main .list_right .hot_buy ul li p em{
+	font-style: normal;
+}
+#big #main .list_right .hot_buy ul li p i{
+	color: #EC4C54;
+	font-family: "airal";
+	font-weight: 700;
+	font-style: normal;
+}
+#big #main .list_right .hot_buy ul li p i span.hottuijianprice{
+	color: #E60065;
+}
+#big #main .list_right .hot_buy ul li p a.buy{
+	display: block;
+	width: 72px;
+	height: 22px;
+	color: #FFF;
+	text-align: center;
+	line-height: 22px;
+	border-radius: 2px;
+	background: #E60065;
+	text-decoration: none;
+}
+/*搜索条件*/
+#big #main .list_right .search{
+	width: 996px;
+}
+#big #main .list_right .search .you_search{
+	width: 994px;
+	float: left;
+	border: 1px solid #cfcfcf;
+	border-bottom: 0px none -moz-use-text-color;
+}
+#big #main .list_right .search .you_search dl{
+	float: left;
+	font-size: 12px;
+	border-bottom: 1px solid #CFCFCF;
+	background: #fff;
+}
+#big #main .list_right .search .you_search dl dt{
+	line-height: 36px;
+	width: 136px;
+	height: 37px;
+	float: left;
+	text-align: center;
+	color: #4A4A4A;
+	font-weight: 700;
+}
+#big #main .list_right .search .you_search dl dt span{
+	float: left;
+}
+#big #main .list_right .search .you_search dl dd{
+	width: 858px;
+	overflow: hidden;
+	float: left;
+}
+
+#big #main .list_right .search .you_search dl dd .contentdd{
+	width: 858px;
+	float: left;
+}
+#big #main .list_right .search .you_search dl dd .contentdd span{
+	float: left;
+	padding: 0px 16px;
+	line-height: 37px;
+}
+#big #main .list_right .search .you_search dl dd .contentdd span a{
+	color: #4B4B4B;
+	white-space: nowrap;
+	text-decoration: none;
+}
+#big #main .list_right .search .you_search dl dd .contentdd span a:visited{
+	color: #EE428E;
+}
+#big #main .list_right .search .you_search dl.animate{
+	height: 0px;
+	display: none;
+}
+#big #main .list_right .search .you_search dl.color{
+	border-top: 1px solid #CFCFCF;
+	margin-top: -1px;
+}
+#big #main .list_right .search .you_search dl span{
+	float: left;
+	padding: 0px 16px;
+	line-height: 37px;
+}
+#big #main .list_right .search .you_search dl span a{
+	color: #4B4B4B;
+	white-space: nowrap;
+	text-decoration: none;
+}
+#big #main .list_right .search .you_search dl span a i{
+	font-style: normal;
+	color: #B6B6B6;
+}
+#big #main .list_right .search .you_search dl.color span.searchcolor{
+	display: inline;
+	padding: 8px 0px;
+	margin-left: 10px;
+	line-height: 37px;
+	height: 21px;
+	float: left;
+}
+
+#big #main .list_right .search .you_search dl.color span.searchcolor img{
+	display: block;
+	padding: 1px;
+	height: 16px;
+	width: 16px;
+	float: left;
+}
+#big #main .list_right .search .rollbut {
+	float: left;
+	margin-top: -1px;
+	padding-left: 453px;
+	cursor: pointer;
+}
+.rollbut img.on{
+	display: none;
+}
+.rollbut img.down{
+	display: block;
+}
+/*右侧产品列表*/
+#big #main .list_right .filter{
+	width: 970px;
+	padding: 6px 12px;
+	margin-top: 40px;
+	border:1px solid #e3e3e3;
+	border-bottom: none;
+	float: left;
+}
+#big #main .list_right .filter .topdiv{
+	float: left;
+	width: 720px;
+	height: 24px;
+	position: relative;
+}
+#big #main .list_right .filter .topdiv .topdiv_on{
+	width: 51px;
+	height: 24px;
+	float: left;
+	display: inline;
+	margin-left: -1px;
+}
+#big #main .list_right .filter .topdiv .topdiv_on .shping{
+	float: left;
+	height: 24px;
+}
+#big #main .list_right .filter .topdiv .topdiv_on a{
+	width: 49px;
+	height: 22px;
+	display: block;
+	background: #fff;
+	border: 1px solid #cfcfcf;
+	color: #343434;
+	line-height: 22px;
+	text-align: center;
+	text-decoration: none;
+}
+#big #main .list_right .filter .topdiv .topdiv_on span{
+	float: left;
+	padding-left: 8px;
+}
+#big #main .list_right .filter .topdiv .topdiv_on a.on{
+	color: #E50067;
+}
+.icon{
+    font-family:"iconfont" !important;
+    font-size:12px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    }
+ #big #main .list_right .filter .pricechoose{
+ 	position: relative;
+	z-index: 1;
+	float: left;
+	width: 142px;
+	min-height: 24px;
+	padding: 0px 5px;
+ }
+ #big #main .list_right .filter .pricechoose .pricetext{
+ 	width: 142px;
+	height: 24px;
+ }
+#big #main .list_right .filter .pricechoose .pricetext span{
+	float: left;
+	width: 62px;
+	overflow: hidden;
+	background:#FFF;
+	border: 1px solid #CCC
+}
+#big #main .list_right .filter .pricechoose .pricetext input{
+	width: 62px;
+	border: 0px none;
+	height: 22px;
+	line-height: 24px;
+	color: #ccc;
+	float: left;
+}
+#big #main .list_right .filter .pricechoose .pricetext i{
+	float: left;
+	line-height: 24px;
+	padding: 0px 3px;
+	font-style: normal;
+} 
+#big #main .list_right .filter .topdiv .checkbtn1{
+	/*position: absolute;*/
+	/*top:24px;*/
+	/*left: 5px;*/
+	width: 125px;
+	overflow: hidden;
+	padding: 6px 0px 8px 15px;
+	background:#EFECEB;
+	/*z-index: 900;*/
+	display: none;
+}
+#big #main .list_right .filter .topdiv .checkbtn1 a{
+	display: inline-block;
+	width: 50px;
+	height: 22px;
+	margin-right: 5px;
+	background:  #FFF;
+	text-align: center;
+	border: 1px solid #CCC;
+	color: #343434;
+	text-decoration: none;
+	float: left;
+}
+#big #main .list_right .filter .topdiv .checkbtn1 a.ok{
+	background: url(../image/ok.jpg) repeat-x ;
+	border: 1px solid #DA2061;
+}
+#big #main .list_right .filter .topdiv .filtermenu{
+	float: left;
+	background:#FFF;
+	border: 1px solid #CFCFCF;
+	height: 22px;
+	padding: 0px 5px;
+}
+#big #main .list_right .filter .topdiv .filtermenu input{
+	/*margin-top: 5px;*/
+	float: left;
+	margin-top:5px; 
+	margin-right: 5px;
+}
+/*商品列表*/
+#big #main .list_right .goods_list{
+	width: 989px;
+	padding-left: 5px;
+	overflow: hidden;
+	border:1px solid #e3e3e3;
+	padding-bottom: 10px;
+	border-top: none;
+	float: left;
+}
+#big #main .list_right .goods_list dl{
+	margin-right: 2px;
+	width: 187px;
+	float: left;
+	padding: 2px;
+	margin: 6px 2px 0px 0px;
+	border:2px solid #fff;
+}
+#big #main .list_right .goods_list dl.cur{
+	border:2px solid #E20265;
+}
+#big #main .list_right .goods_list dl dt{
+	width: 187px;
+	position: relative;
+}
+#big #main .list_right .goods_list dl dt img{
+	width: 187px;
+	height: 253px;
+	display: block;
+}
+#big #main .list_right .goods_list dl dt p{
+	width: 186px;
+	height: 35px;
+	opacity: 0.7;
+	position: absolute;
+	bottom: 45px;
+	background: #000;
+	z-index:0;
+	display: none;
+}
+#big #main .list_right .goods_list dl dt .sizebox{
+	width: 186px;
+	overflow: hidden;
+	padding: 5px 0px;
+	position: absolute;
+	left: 1px;
+	bottom: 45px;
+	z-index: 2;
+	float: left;
+	display: none;
+}
+
+#big #main .list_right .goods_list dl dt .sizebox span{
+	color: #fff;
+	font-family: 宋体;
+}
+#big #main .list_right .goods_list dl dt .sizebox span b{
+	font-style: normal;
+	font-weight: 400;
+	font-family: 宋体;
+}
+#big #main .list_right .goods_list dl dt .sizebox span i{
+	font-style: normal;
+}
+#big #main .list_right .goods_list dl dt .sizebox img{
+	width: 42px;
+	height: 21px;
+	float: right;
+	margin-right: 5px;
+	
+}
+#big #main .list_right .goods_list dl dt .hot{
+	background: url(../image/hot.jpg) no-repeat scroll 3px 5px #FE0000;
+	box-shadow: 2px 2px 6px #000;
+	color: #FFF;
+	height: 18px;
+	left: 0px;
+	line-height: 18px;
+	padding-left: 23px;
+	position: absolute;
+	top: 10px;
+	width: 26px;
+	font-family: 宋体;
+}
+#big #main .list_right .goods_list dl dt .colorbox{
+	width: 100%;
+	overflow: hidden;
+	padding-top: 6px;
+	height: 39px;
+}
+#big #main .list_right .goods_list dl dt .colorbox img{
+	width: 24px;
+	height: 35px;
+}
+#big #main .list_right .goods_list dl dt .colorbox a{
+	float: left;
+	width: 24px;
+	height: 35px;
+	border: 1px solid #D8DAD9;
+	padding: 1px;
+	margin-right: 6px;
+	text-decoration: none;
+}
+#big #main .list_right .goods_list dl dt .colorbox a.on{
+	border: 1px solid #E10164;
+}
+#big #main .list_right .goods_list dl dd{
+	padding: 6px 3px 0px;
+}
+ #big #main .list_right .goods_list dl dd span{
+ 	display: block;
+	height: 22px;
+	overflow: hidden;
+ }
+#big #main .list_right .goods_list dl dd span i{
+	font-style: normal;
+	color: #F0006A;
+	font-size: 16px;
+	padding-right: 10px;
+}
+#big #main .list_right .goods_list dl dd span del{
+	color: #A6A6A6;
+}
+#big #main .list_right .goods_list dl dd a{
+	width: 100%;
+	white-space: nowrap;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-decoration: none;
+}
+#big #main .list_right .goods_list dl dd a b{
+	color: #0087DF;
+	padding-left: 12px;
+	font-weight: normal;
+}
+
+
+
+
+
+
+

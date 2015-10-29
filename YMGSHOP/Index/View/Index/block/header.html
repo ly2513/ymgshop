@@ -1,0 +1,299 @@
+<!-- top start--> 
+	<div id="top">
+		<div class="top">
+			<div class="left">
+				<if value="{$hd.session.username}==''">
+				<span>欢迎光临优美购！</span>
+				<a href="{|U:'User/login'}">登录</a>  |  <a href="{|U:'User/register'}">注册</a>
+				<else/>
+				<!-- 管理员登录后 -->
+					<span style="">^~^{$hd.session.username},</span><span>欢迎光临优美购！</span><a href="{|U:'Member/Index/index'}">个人中心</a>
+				<a href="{|U:'User/out'}">退出</a>
+			</if>
+			</div>
+		</div>
+	</div>
+	<!-- top end -->
+
+	<!-- search start -->
+	<div class="searchpro">
+		<div id="search">
+			<div class="logo">
+				<a href="{|U:'Index/index'}"><img src="__CONTROLLER_VIEW__/image/logo.png" alt="" style="height:117px; width:310px " /></a>
+			</div>
+
+			<form action="" name="search">
+			<div class="search">
+				<span ><input type="text"  class="keyworks" /></span>
+				<span calss="sub"><input type="submit" value="搜索"  class="sub" /> </span>
+			</div>
+			</form>
+
+			<!-- shop car -->
+			<div class="car">
+				<div class="top_car">
+					<div class="cart">
+					<if value="{$hd.session.cart.num}==''">
+						<span id="CartCount" mola="totalqty">0</span>
+					<else/>
+						<span id="CartCount" mola="totalqty">{$hd.session.cart.num}</span>
+					</if>
+						<i class="iconfont">&#xf0179;</i>
+							<a href="{|U:'Cart/index'}">购物车</a>
+						<i class="iconfont">&#xf02af;</i>
+					</div>
+					<empty value="$hd.session.cart.goods">
+						<!--  购物车没商品时显示，有就不显示-->
+						<div class="car_box">
+							<span>您的购物车里还没有商品，欢迎选购！</span>	
+						</div>
+						<noempty/>
+						<!-- 购物车商品布局 -->
+						<div class="car_list">
+							<ul class="topnav">
+							<list from="$hd.session.cart.goods" name="$d">
+								<li>
+									<a href="{|U:'detail',array('gid'=>$d['gid'])" class="pro_img">
+										<img src="__ROOT__/{$d.img}" alt="">
+									</a>
+									<a href="{|U:'detail',array('gid'=>$d['gid'])}" class="pro_name">{$d.goods_name}</a>
+									<span class="pro_price">{$d.price}</span>
+									<div class="num_box">
+										<label class="shop_num">X{$d.num}</label>
+										<a href="javascript:;" class="del" id="{$d.cartId}" MODULE="__MODULE__">删除</a>
+									</div>
+								</li>
+							</list>
+							</ul>
+							<div class="checkout_box">
+								<br /><br />
+								<p><span>共<strong>{$hd.session.cart.totalNum}</strong>件商品</span>
+									合计：<strong>￥{$hd.session.cart.totalPrice}.00</strong>
+								</p>
+								<a href="{|U:'Cart/index'}" class="check_btn">去结算</a>
+							</div>
+						</div>
+					</empty>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- search end -->
+	<!-- nev start -->
+	<div id="nev">
+		<ul class="topnav">
+			<li class="stone"><a href="{|U:'index'}">优美购首页</a></li>
+			<!-- 栏目数据 -->
+			<list  from="$catedata" name="$d"  >
+			<li><a href="{|U:'lists',array('cid'=>$d['cid'])}">{$d.cat_name}</a></li>
+			</list>
+			<!-- 所有商品分类开始 -->
+			<li class="last">
+				<div id="last_nav">
+					<div class="allshop">
+						<a href="{|U:'index'}" class="topnava">所有商品分类</a>
+					</div>
+					<div class="cata_group">
+					<!-- girl start -->
+						<dl class="cata_group_dl">
+							<dt class="cata_group_dt">
+								<h3><a href="javascript:;"><del></del><i class="nav_font">&#x3465;</i>女装</a></h3>
+							</dt>
+							<dd class="cata_group_dd">
+								<div class="son_group">
+									<dl>
+										<categorylist cid="1" row="20">
+										<div class="float">
+										<dt>
+											<a href="{|U:'lists',array('cid'=>$field['cid'])}">{$field.cat_name}</a>
+										</dt>
+											<dd>
+											<categorylist cid="{$field.cid}" row="20">
+												<a href="{|U:'lists',array('cid'=>$field['cid'])}"><span>{$field.cat_name}</span><span style="padding:0px 3px;">|</span>  </a>  
+												</categorylist>
+											</dd>
+										</div>
+										</categorylist>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+					<!-- girl end -->
+					<!-- 内衣 -->
+						<dl class="cata_group_dl huibg">
+							<dt class="cata_group_dt">
+								<h3><a href="javascript:;"><del></del><i class="nav_font">&#xe603;</i>内衣</a></h3>
+							</dt>
+							<dd class="cata_group_dd">
+								<div class="son_group">
+									<dl>
+										<categorylist cid="2" row="20">
+										<div class="float">
+										<dt>
+											<a href="{|U:'lists',array('cid'=>$field['cid'])}">{$field.cat_name}</a>
+										</dt>
+											<dd>
+											<categorylist cid="{$field.cid}" row="20">
+												<a href="{|U:'lists',array('cid'=>$field['cid'])}"><span>{$field.cat_name}</span><span style="padding:0px 3px;">|</span>  </a>  
+												</categorylist>
+											</dd>
+										</div>
+										</categorylist>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- 男装 -->
+						<dl class="cata_group_dl ">
+							<dt class="cata_group_dt">
+								<h3><a href="javascript:;"><del></del><i class="nav_font">&#x3461;</i>男装</a></h3>
+							</dt>
+							<dd class="cata_group_dd">
+								<div class="son_group">
+									<dl>
+										<categorylist cid="3" row="20">
+										<div class="float">
+										<dt>
+											<a href="{|U:'lists',array('cid'=>$field['cid'])}">{$field.cat_name}</a>
+										</dt>
+											<dd>
+											<categorylist cid="{$field.cid}" row="20">
+												<a href="{|U:'lists',array('cid'=>$field['cid'])}"><span>{$field.cat_name}</span><span style="padding:0px 3px;">|</span>  </a>  
+												</categorylist>
+											</dd>
+										</div>
+										</categorylist>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- 童装 -->
+						<dl class="cata_group_dl huibg">
+							<dt class="cata_group_dt">
+								<h3><a href="javascript:;"><del></del><i class="nav_font">&#xf01db;</i>童装</a></h3>
+							</dt>
+							<dd class="cata_group_dd">
+								<div class="son_group">
+									<dl>
+										<categorylist cid="4" row="20">
+										<div class="float">
+										<dt>
+											<a href="{|U:'lists',array('cid'=>$field['cid'])}">{$field.cat_name}</a>
+										</dt>
+											<dd>
+											<categorylist cid="{$field.cid}" row="20">
+												<a href="{|U:'lists',array('cid'=>$field['cid'])}"><span>{$field.cat_name}</span><span style="padding:0px 3px;">|</span>  </a>  
+												</categorylist>
+											</dd>
+										</div>
+										</categorylist>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- 鞋子 -->
+						<dl class="cata_group_dl ">
+							<dt class="cata_group_dt">
+								<h3><a href="javascript:;"><del></del><i class="nav_font">&#xf009a;</i>鞋子</a></h3>
+							</dt>
+							<dd class="cata_group_dd cata_group_dd1 ">
+								<div class="son_group ">
+									<dl>
+										<categorylist cid="5" row="20">
+										<div class="float">
+										<dt>
+											<a href="{|U:'lists',array('cid'=>$field['cid'])}">{$field.cat_name}</a>
+										</dt>
+											<dd>
+											<categorylist cid="{$field.cid}" row="20">
+												<a href="{|U:'lists',array('cid'=>$field['cid'])}"><span>{$field.cat_name}</span><span style="padding:0px 3px;">|</span>  </a>  
+												</categorylist>
+											</dd>
+										</div>
+										</categorylist>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- 化妆品 -->
+						<dl class="cata_group_dl huibg">
+							<dt class="cata_group_dt">
+								<h3><a href="javascript:;"><del></del><i class="nav_font">&#xe638;</i>化妆品</a></h3>
+							</dt>
+							<dd class="cata_group_dd cata_group_dd2">
+								<div class="son_group">
+									<dl>
+										<categorylist cid="6" row="20">
+										<div class="float">
+											<dt>
+												<a href="{|U:'lists',array('cid'=>$field['cid'])}">{$field.cat_name}</a>
+											</dt>
+												<dd>
+												<categorylist cid="{$field.cid}" row="20">
+													<a href="{|U:'lists',array('cid'=>$field['cid'])}"><span>{$field.cat_name}</span><span style="padding:0px 3px;">|</span>  </a>  
+													</categorylist>
+												</dd>
+										</div>
+										</categorylist>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- 饰品 -->
+						<dl class="cata_group_dl ">
+							<dt class="cata_group_dt">
+								<h3><a href="javascript:;"><del></del><i class="nav_font">&#x3452;</i>饰品</a></h3>
+							</dt>
+							<dd class="cata_group_dd cata_group_dd3">
+								<div class="son_group">
+									<dl>
+										<categorylist cid="7" row="20">
+										<div class="float">
+										<dt>
+											<a href="{|U:'lists',array('cid'=>$field['cid'])}">{$field.cat_name}</a>
+										</dt>
+											<dd>
+											<categorylist cid="{$field.cid}" row="20">
+												<a href="{|U:'lists',array('cid'=>$field['cid'])}"><span>{$field.cat_name}</span><span style="padding:0px 3px;">|</span>  </a>  
+												</categorylist>
+											</dd>
+										</div>
+										</categorylist>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<!-- 包包 -->
+						<dl class="cata_group_dl huibg">
+							<dt class="cata_group_dt">
+								<h3><a href="javascript:;"><del></del><i class="nav_font">&#x3464;</i>包包</a></h3>
+							</dt>
+							<dd class="cata_group_dd cata_group_dd4">
+								<div class="son_group">
+									<dl>
+										<categorylist cid="8" row="20">
+										<div class="float">
+										<dt>
+											<a href="{|U:'lists',array('cid'=>$field['cid'])}">{$field.cat_name}</a>
+										</dt>
+											<dd>
+											<categorylist cid="{$field.cid}" row="20">
+												<a href="{|U:'lists',array('cid'=>$field['cid'])}"><span>{$field.cat_name}</span><span style="padding:0px 3px;">|</span>  </a>  
+												</categorylist>
+											</dd>
+										</div>
+										</categorylist>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+				</div>
+				
+
+			</li>
+			<!-- 所有商品分类结束 -->
+		</ul>
+	</div>
+	<!-- nev end

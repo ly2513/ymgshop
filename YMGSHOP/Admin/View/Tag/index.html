@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>标签管理</title>
+    <hdjs/>
+    <bootstrap/>
+    <script type="text/javascript" src="__CONTROLLER_VIEW__/js/js.js"></script>
+    <style type="text/css">
+        /*修改按钮*/
+       .table2 tr td{
+            height: 35px;
+        }
+        input[type="text"]{
+            background-color: #FFFFFF;
+            border: 2px solid #DDDDDD;
+            border-radius: 0;
+            box-shadow: 2px 2px 2px #F0F0F0 inset !important;
+            color: #555555;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 30px;
+            margin: 0;
+            padding: 0 6px;
+            vertical-align: middle;
+            height: 30px;
+        }
+        input[type="text"]:focus{
+            background: none repeat scroll 0 0 #FFFBDE;
+            border: 2px solid #51B4FF;
+            box-shadow: none !important;
+            outline: 1px solid #51B4FF;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <table class="table2">
+        <thead>
+        <tr>
+            <td width="30">id</td>
+            <td>标签名</td>
+            <td width="200">操作</td>
+        </tr>
+        </thead>
+        <tbody>
+            <foreach from="$data" value="$v">
+            <tr>
+                <td width="30">{$v.tid}
+                 
+                </td>
+                <td>
+                    <span class="tname">{$v.tagname}</span>
+                    <form action="" name="tag_form">
+                    <input type="hidden" name="tid" value="{$v.tid}"/>
+                    <input type="text" style="display:none" value="{$v.tagname}" class="taginput" name="tagname"  />
+                    </form>
+                </td>
+                <td width="200">
+                    <a href="javascript:;" tid="{$v.tid}" id="edit_a">编辑</a>
+                    <a href="javascript:;" tid="{$v.tid}" id="save_a" style="display:none">保存</a>
+                    <a href="javascript:;" onclick="if(confirm('确定删除么')) location.href='{|U:'tag/del',array('tid'=>$v['tid'])}'">删除</a>
+                </td>
+            </tr>
+            </foreach>
+        </tbody>
+    </table>
+    <div class="page_hdjob">
+        {$page}
+    </div>
+</div>
+
+</body>
+</html>
+
+

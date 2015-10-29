@@ -1,0 +1,140 @@
+#big{
+	height: 97px;
+	width: 1200px;
+	margin:0 auto;
+}
+#big .order_right{
+	background-image: url('../image/progressBar.gif');
+	background-position: 0px -27px;
+	float: right;
+	margin-top: 33px;
+	width: 618px;
+	height: 25px;
+}
+#order{
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 13px;
+
+
+}
+#order .order_main{
+	width: 1200px;
+	margin: 0 auto;
+
+}
+#order .order_main .title{
+	width: 1106px;
+	height: 33px;
+	background:#F5F5F5;
+	line-height: 33px;
+	padding-left: 92px;
+	display: block;
+}
+#order .order_main .title span.address{
+	height: 33px;
+	width: 113px;
+	background: url('../image/shop_car.gif') 0px -288px;
+	float: left;
+    display: inline-block;
+    position: absolute;
+}
+#order .order_main .buygoods{
+	width: 1198px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #E1E1E1 #EBEBEB #EBEBEB;
+	padding-top: 9px;
+	float: left;
+	margin-bottom: 50px;
+}
+#order .order_main .buygoods .usermessage{
+	width: 1071px;
+	float: left;
+	border-top: 1px solid #EBEBEB;
+	padding-left: 127px;
+}
+#order .order_main .buygoods .usermessage .addr{
+	width: 860px;
+	padding-top: 15px;
+	color: #333;
+}
+#order .order_main .buygoods .usermessage .addr .sh{
+	width: 100%;
+	padding: 10px 0px;
+	float: left;
+}
+#order .order_main .buygoods .usermessage .addr .sh .shr{
+	float: left;
+	line-height: 22px;
+
+}
+#order .order_main .buygoods .usermessage .addr .tarea_title{
+	width: 93px;
+	text-align: right;
+	color: #323232;
+	float: left;
+}
+.usermessage .addr .tarea_title .star{
+	width: 30px;
+    height: 20px;
+    text-align: center;
+    display: block;
+    float: left;
+    color: #D8017A;
+}
+.usermessage .addr .shrname{
+	width: 700px;
+	float: left;
+	display: inline-block;
+}
+.usermessage .addr .shrname input.name{
+	line-height: 22px;
+	height: 22px;
+	border: 1px solid #E4E3E9;
+}
+.usermessage .addr .xxdz,.email,.dh{
+	width: 860px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: left;
+}
+.usermessage .addr select{
+	border: 1px solid #E4E3E9;
+	line-height: 24px;
+	height: 24px;
+	width: 150px;
+}
+.usermessage .addr input.dzxx{
+	width: 460px;
+	border: 1px solid #E4E3E9;
+	line-height: 22px;
+}
+.usermessage .addr .shrname span.format{
+	color: #D0D0D0;
+}
+.usermessage .addr .surebtn{
+	padding: 20px;
+	float: left;
+}
+.usermessage .addr .surebtn a{
+	font-size: 18px;
+	text-decoration: none;
+	color: #FFF;
+	letter-spacing: 5px;
+	width: 148px;
+	height: 38px;
+	line-height: 38px;
+	display: inline-block;
+	text-align: center;
+	background: #EB0067;
+}
+
+
+
+
+
+
+
+
+

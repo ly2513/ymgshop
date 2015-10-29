@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>编辑商品</title>
+<hdjs/>
+<css file="{__CONTROLLER_VIEW__}/Css/add.css" />
+
+<js file="__CONTROLLER_VIEW__/Js/add.js"/>
+<script type="text/javascript">
+	$(function(){
+		$("[name='cat_id']").val("{$data.cat_id}").change();
+	})
+</script>
+</head>
+<body>
+	<form action="" method='post' enctype='multipart/form-data'>
+	<input type="hidden" value="{$data.gid}" name="gid" />
+	<div class="warp">
+		<div class="menu_list">
+			<ul>
+				<li><a href="{|U:'index'}">商品列表</a></li>
+				<li><a href="{|U:'add'}">添加商品</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="tab">
+	    <ul class="tab_menu">
+	        <li lab="base">
+	            <a> 基本设置 </a>
+	        </li>
+	        <li lab="other" class="action">
+	            <a>其他</a>
+	        </li>
+	        <li lab="content">
+	            <a>详情 </a>
+	        </li>
+	        <li lab="image">
+	            <a>图片列表 </a>
+	        </li>
+	         <li lab="attribute">
+	            <a>商品属性</a>
+	        </li>
+	    </ul>
+    	<div class="tab_content  hd-form">
+        	<div id="base">
+	            <table class="table1">
+	                <tr>
+	                    <th class='w100'>商品名称</th>
+	                    <td>
+	                        <input type="text" name="goods_name" class='w200'value="{$data.goods_name}"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                	<th>栏目</th>
+	                	<td>
+	                		<select name="cid">
+	                			<option value="0">==选择栏目==</option>
+	                			<list from="$category" name='$c'>
+	                				<option value="{$c.cid}"<if value="{$c.cid}=={$data.cid}">selected=""</if>>{$c._name}</option>
+	                			</list>
+	                		</select>
+	                	</td>
+	                </tr>
+	                <tr>
+	                    <th>商品货号</th>
+	                    <td>
+	                        <input type="text" name="goods_sn" class='w200' value="{$data.goods_sn}" />
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <th>属性</th>
+	                    <td>
+	                        <label><input type="checkbox" name="is_hot" value="1"<if value="$data.is_hot eq 1">checked=""</if>/> 热门</label>
+	                        <label><input type="checkbox" name="is_new"  value="1"<if value="$data.is_new eq 1">checked=""</if>/> 新品</label>
+	                        <label><input type="checkbox" name="is_best" value="1" <if value="$data.is_best eq 1">checked=""</if>/> 精品</label>
+	                    </td>
+	                </tr>
+	                <tr>
+	                	<th>图片</th>
+	                	<td>
+	                		<img src="__ROOT__/{$data.original_img}" alt="" class=" w100"  />
+	                		<input type="file" name='original_img'/>
+
+	                	</td>
+	                </tr>
+	                <tr>
+	                    <th>状态</th>
+	                    <td>
+	                        <label><input type="radio" name="is_on_sale" value='1' <if value="{$data.is_on_sale}==1">checked=""</if>/> 上架</label>
+	                        <label><input type="radio" name="is_on_sale" value='0'<if value="{$data.is_on_sale}==0">checked=""</if>/> 下架</label>
+	                    </td>
+	                </tr>
+	                 <tr>
+	                    <th>商城价</th>
+	                    <td>
+	                        <input type="text" name="goods_price" class='w200' value="{$data.goods_price}" />
+	                    </td>
+	                </tr>
+	                 <tr>
+	                    <th>市场价</th>
+	                    <td>
+	                        <input type="text" name="market_price" class='w200' value="{$data.market_price}" />
+	                    </td>
+	                </tr>
+	            </table>
+        	</div>
+        	<div id="other">
+           		<table class='table1'>
+	           		<tr>
+	           			<th class='w100'>重量</th>
+	           			<td>
+	           				<input type="text" name='goods_weight' class='w200' value="{$data.goods_weight}">
+	           				<select name="weight_unit">
+	           					<option value="千克"<if value="{$data.weight_unit}=='千克'">selected=""</if>>千克</option>
+	           					<option value='克'<if value="{$data.weight_unit}=='克'">selected=""</if>>克</option>
+	           					<option value='市斤'<if value="{$data.weight_unit}=='市斤'">selected=""</if>>市斤</option>
+	           				</select>
+	           			</td>
+	           		</tr>
+	           		<tr>
+	           			<th class='w100'>上架时间</th>
+	           			<td>
+	           				<input type="text" readonly="readonly" id="sale_time" name="sale_time" value="{$data.sale_time|date:'Y-m-d H:i:s',@@}" class="w150"/>
+						<script>
+							$('#sale_time').calendar({format: 'yyyy/MM/dd HH:mm:ss'});
+						 </script>
+	           			</td>
+	           		</tr>
+	           		<tr>
+	           			<th>品牌</th>
+	           			<td>
+	           				<select name="bid">
+	           					<list from='$brand' name='$b'>
+								<option value="{$b.bid}" <if value="{$data.bid}=={$b.bid}">selected=""</if>>{$b.brand_name}</option>
+	           					</list>
+	           				</select>
+	           			</td>
+	           		</tr>
+	           		<tr>
+	           			<th>商品数量</th>
+	           			<td>
+	           				<input type="text" name='goods_number' class='w200' value="{$data.goods_number}">
+	           			</td>
+	           		</tr>
+	           		<tr>
+	           			<th>查看</th>
+	           			<td>
+	           				<input type="text" name='goods_click' class='w200' value="{$data.goods_click}"> 次
+	           			</td>
+	           		</tr>
+           		</table>
+        	</div>
+        	<div id='content'>
+	        	<table class='table1'>
+	        		<tr>
+	        			<th class='w100'>关键字</th>
+	        			<td>
+	        				<input type="text" name='goods_key' class='w200' value="{$goods_data.goods_key}">
+	        			</td>
+	        		</tr>
+	        		<tr>
+	        			<th>描述</th>
+	        			<td>
+	        				<textarea name="goods_desc" class='w200 h100'>{$goods_data.goods_desc}</textarea>
+	        			</td>
+	        		</tr>
+	        		<tr>
+	        			<th>详情</th>
+	        			<td>
+	        				<ueditor name='goods_body'content="{$goods_data.goods_body}"/>
+	        			</td>
+	        		</tr>
+	        	</table>
+        	</div>
+	        <div id='image'>
+	        	<table class='table1'>
+	        		<tr>
+	        			<th class='w100'>详情页图片</th>
+	        			<td>
+    						<ul id="img_list">
+    							<if value="$goods_gallery">
+								<list from="$goods_gallery" name="$d">
+	        					<li style="position:relative;margin-right:10px">
+	        						<if value="{$d.img_original}!=''">
+	        						<input type="hidden" name="gallery_id" value="{$d.gallery_id}" />
+    								<img src="__ROOT__/{$d.img_url}" alt=""class="h100" class="list_img"/>
+    								</if>
+    								<a href="javascript:;" class="sub" gid="{$d.gallery_id}" title="删除此图片"><i class="iconfont " style="position:absolute; font-size:15px;z-index:1;right:-5px;top:-5px">&#xf00b3;</i></a>
+    							</li>
+    							</list>
+    								<li style="clear:both;">
+    								<span style="clear:both;"><a href="javascript:add();" class="add" gid="{$d.gallery_id}" ><i class="iconfont ">&#xf0175;</i></a>
+    								<input type="file" name='img_original[]' class='w100'>
+    								</span>
+    								</li>
+								<else/>
+								<li >
+	        						<a href="javascript:add();" class="add" >
+	        						<i class="iconfont ">&#xf0175;</i></a>
+    								<input type="file" name='img_original[]' class='w100'>
+    							</li>
+									
+    							</if>
+    							
+	        				</ul>
+
+	        			</td>
+	        		</tr>
+	        	</table>
+	        </div>
+	        <div id='attribute'>
+	        	<table class='table1'>
+	        		<tr>
+	        			<th class='w100'>商品类型</th>
+	        			<td>
+	        				<select name="cat_id" id="cat_id" onchange="getAttr()" gid="{$data.gid}">
+	        					<option value="0">==请选择商品类型==</option>
+	        					<list from='$goodstype' name='$gt'>
+								<option value="{$gt.cat_id}">{$gt.cat_name}</option>
+	        					</list>
+	        				</select>
+	        			</td>
+	        		</tr>
+	        		<tr>
+	        			<th>属性</th>
+	        			<td>
+	        				<div id="attr">
+	        					
+	        				</div>
+	        			</td>
+	        		</tr>
+	        	</table>
+	        </div>
+    	</div>
+	</div>
+	<div class="position-bottom" style="width:58px;border:1px solid #AAAAAA ">
+		<input type="submit" value='确定' class='hd-success'>
+	</div>
+
+</form>
+</body>
+</html>

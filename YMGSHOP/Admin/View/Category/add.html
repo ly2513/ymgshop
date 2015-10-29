@@ -1,0 +1,81 @@
+<!-- @author 李勇 626375290@qq.com -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<hdjs/>
+<title>添加商品栏目</title>
+</head>
+<body>
+	<div class="warp">
+	<div class="menu_list ">
+		<ul>
+			<li ><a href="{|U:'index'}" class="action">商品栏目列表</a></li>
+			<li><a href="{|U:'add'}">添加商品栏目</a></li>
+		</ul>
+	</div>
+		<div class="title-header">添加商品栏目</div>
+		<form  method="post">
+			<table class="table2 hd-form">
+				<tr>
+					<th class="w100">顶级栏目</th>
+					<td>
+						<select name="pid" id="">
+						<option value="0">==顶级栏目==</option>
+						<list from="$category" name="$d">
+							<option value="{$d.cid}" <if value="{$d.cid}==Q('cid')">selected=""</if>>{$d._name}</option>
+						</list>
+						</select>
+					</td>
+				</tr>	
+				<tr>
+					<th class="w100">商品栏目名称</th>
+					<td>
+						<input type="text" class="w200"  name="cat_name" />
+					</td>
+				</tr>
+				<tr>
+					<th class="w100">显隐状态</th>
+					<td>
+						<lable>
+							<input type="radio" class="w50"  name="is_show" value="0" />隐藏
+						</lable>
+						<lable>
+							<input type="radio" class="w50"  name="is_show" value="1" />显示
+						</lable>
+					</td>
+				</tr>
+				<tr>
+					<th class="w100">单位</th>
+					<td>
+						<input type="text" class="w200"  name="measure_unit" value="件" />
+					</td>
+				</tr>
+				<tr>
+					<th class="w100">价格区间</th>
+					<td>
+						<input type="text" class="w200"  name="grade"  />
+					</td>
+				</tr>
+				<tr>
+					<th class="w100">关键字</th>
+					<td>
+						<input type="text" class="w200"  name="cat_key"  />
+					</td>
+				</tr>
+				<tr>
+					<th class="w100">描述</th>
+					<td>
+						<textarea name="cat_desc"  clas="w300 h100"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td><input type="submit" value="添加" class="hd-success" /></td>
+				</tr>
+			</table>
+			
+		</form>
+	</div>
+</body>
+</html>

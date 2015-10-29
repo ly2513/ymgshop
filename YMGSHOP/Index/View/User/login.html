@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>优美购登录</title>
+<hdjs/>
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/css/login.css" />
+<js file="__CONTROLLER_VIEW__/js/register.js"/>
+</head>
+<body>
+	<!-- logo area -->
+	<div class="head">
+		<a href=""><img src="__CONTROLLER_VIEW__/image/logo.png" alt=""  /></a>
+	</div>
+	<!-- logo area -->
+	<!-- login info start-->
+	<div class="main">
+		<div class="user_frame">
+			<h2 class="title"> <img src="__CONTROLLER_VIEW__/image/login.jpg" alt="" /></h2>
+			<div class="login_info">
+				<div class="user_info">
+					<form action="" method="post" name="login" class="hd-form">
+						<div class="userinfo_input">
+							<label class="i_label">邮箱:</label>
+							<input type="text" class="i_text" name="email" placeholder="输入用户邮箱" />
+						</div>
+						<div class="userinfo_input">
+							<label class="i_label">登录密码:</label>
+							<input type="password" class="i_text" name="password" placeholder="输入用户密码"/>
+						</div>
+						<div class="userinfo_input">
+							<label class="i_label">验证码:</label>
+							<input type="text" class="i_text_code" name="code" placeholder="验证码"/>
+							<span class="code_img">
+								<img src="{|U:'User/code'}" alt="" class="checkCode" />
+								<span id="click_code" >看不清,换一张</span>
+							</span>
+						</div>
+						<div class="userinfo_input">
+							<label class="i_label"></label>
+							<input type="submit" class="i_btn_ok" value="登录" class="i_btn_ok"  />
+							<label class="i_forget_psw">忘记密码?</label>
+						</div>
+					</form>
+				</div>
+				<div class="user_info_right">
+					<b>还不是优美购会员？</b>
+					<a href="{|U:'User/register'}" class="rsg">注册新用户</a>
+				</div>
+			</div>
+			<div class="bian"></div>
+		</div>
+	</div>
+	<!-- login info end -->
+	<!-- foot start -->
+	<div class="foot">
+		<div class="footer">
+			<p>首页 公司简介 网站地图 诚聘英才 零售店址 优美购网加盟 网店代理 友情链接 评论 图片 优美购俱乐部</p><br />
+			<p>Copyright © 2010-2019 优美购官方网站, All Rights Reserved 京B2-20080069号 </p>
+		</div>
+	</div>
+	<!-- foot end -->
+</body>
+</html>

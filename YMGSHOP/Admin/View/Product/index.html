@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>货品管理</title>
+<hdjs/>
+<link rel="stylesheet" href="__CONTROLLER_VIEW__/Css/css.css"/>
+</head>
+<body>
+	<div class="warp">
+		<div class="menu_list">
+			<ul>
+				<li><a href="">货品列表</a></li>
+				<li><a href="{|U:'Goods/index'}">商品列表</a></li>
+			</ul>
+		</div>
+		<form action="" method="post">
+		<input type="hidden" name="gid" value="{$hd.get.gid}" />
+			<table class="table2 hd-form">
+				<thead>
+					<tr>
+					<td class="w100">ID</td>
+					<!-- 动态获取商品规格属性名称 -->
+						<list from="$attrdata" name="$d">
+							<td class="w200">{$d.0.attr_name}</td>
+						</list>
+						<td class="w200">货号</td>
+						<td class="w200">库存</td>
+						<td class="w200">操作</td>
+					</tr>
+				</thead>
+				<tbody>
+				<list from="$Productdata" name="$d">
+					<tr>
+						<td class="w100">{$d.product_id}</td>
+						<!-- 动态获取属性数据 -->
+						<list from="$d.attr_value_str" name="$m">
+							<td >{$m}</td>
+						</list>
+						<td>{$d.product_sn}</td>
+						<td>{$d.product_number}</td>
+						<td class="sub"><a href="javascript:;" onclick="deleteProduct(this,{$d.product_id})" ><i class="iconfont">&#xf0176;</i></a></td>
+					</tr>
+				</list>
+				<tr>
+					<td></td>
+					<!-- 商品属性 -->
+					<list from="$attrdata" name="$d"> 
+						<td>
+							<select name="attr[{$d.0.attr_id}][]" >
+								<option value="0">==请选择属性==</option>
+								<list from="$d" name="$m">
+								<option value="{$m.id}">{$m.attr_value}</option>
+								</list>
+							</select>
+						</td>
+					</list>
+					<td><input type="text" name="product_sn[]" /></td>
+					<td><input type="text" name="product_number[]"  /></td>
+					<td class="add"><a href="javascript:;" onclick="addProduct(this)"><i class="iconfont">&#xf0175;</i></a></td>
+				</tr>
+				</list>
+				</tbody>
+			</table>
+			<div class="position-bottom">
+				<input type="submit" value="确定"  class="hd-success" />
+			</div>
+			
+		</form>
+
+	</div>
+	<js file="__CONTROLLER_VIEW__/Js/js.js"/>
+</body>
+</html>
